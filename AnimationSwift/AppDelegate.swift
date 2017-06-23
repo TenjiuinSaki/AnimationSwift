@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Spots
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setDefaultStyles()  //设置默认风格
+        
+        
+        
+        
+        
+        let rootViewController = GradientViewController(title: "Gradient")
+        window?.rootViewController = UINavigationController(rootViewController: rootViewController)
         return true
+    }
+    
+    func setDefaultStyles() {
+        let navigationBar = UINavigationBar.appearance()
+        navigationBar.barStyle = .black     //状态栏和标题为白色
+        navigationBar.isTranslucent = false //设置不透明
+        navigationBar.titleTextAttributes = [   //设置标题文字属性
+            NSForegroundColorAttributeName: Color.navigationBarForeground,  //前景色
+            NSFontAttributeName: Font.navigationBar                         //字体
+        ]
+        navigationBar.barTintColor = UIColor(hex:"#FD4340")
+        navigationBar.tintColor = Color.navigationBarForeground //导航栏按钮颜色
+        navigationBar.shadowImage = UIImage()   //取消分割线
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

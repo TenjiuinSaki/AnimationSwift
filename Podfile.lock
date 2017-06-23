@@ -1,0 +1,32 @@
+PODS:
+  - Cache (3.3.0):
+    - SwiftHash (~> 1.4.0)
+  - Fakery (2.0.0)
+  - Hue (2.0.1)
+  - Spots (6.0.3):
+    - Spots/Core (= 6.0.3)
+  - Spots/Core (6.0.3):
+    - Cache (~> 3.0)
+    - Tailor (~> 2.0)
+  - Sugar (3.1.2)
+  - SwiftHash (1.4.0)
+  - Tailor (2.2.1)
+
+DEPENDENCIES:
+  - Fakery
+  - Hue
+  - Spots
+  - Sugar
+
+SPEC CHECKSUMS:
+  Cache: 871805a8a7268feac34f5c10c54506801f0bd4cd
+  Fakery: 97b99c23937d2e025d9135c75e2b17351ccd5031
+  Hue: 354caec055fdc9d38b5ef33ca2e7224721843baf
+  Spots: e4b5f7db96107594d1be9e1a0b92e03ef40c59ef
+  Sugar: e2eb40928c2589bf55977e335a5bc183d09cce24
+  SwiftHash: acf0f29032309a5c7a7f625595eade1aca97aca2
+  Tailor: caabfebed676fab6e00c0c173e05294ccf89861e
+
+PODFILE CHECKSUM: ff3a63a4306f99abf10abfaa74f9a2b62672b8af
+
+COCOAPODS: 1.2.1
