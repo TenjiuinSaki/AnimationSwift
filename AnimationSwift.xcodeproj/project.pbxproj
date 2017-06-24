@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5632BFEE1EDD9B5600605018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632BFED1EDD9B5600605018 /* AppDelegate.swift */; };
-		5632BFF01EDD9B5600605018 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632BFEF1EDD9B5600605018 /* ViewController.swift */; };
 		5632BFF31EDD9B5600605018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5632BFF11EDD9B5600605018 /* Main.storyboard */; };
 		5632BFF51EDD9B5600605018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5632BFF41EDD9B5600605018 /* Assets.xcassets */; };
 		5632BFF81EDD9B5600605018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5632BFF61EDD9B5600605018 /* LaunchScreen.storyboard */; };
+		5635ED851EFE83590074F8C4 /* AnimateTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635ED841EFE83590074F8C4 /* AnimateTableController.swift */; };
+		5635ED881EFE9CBF0074F8C4 /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5635ED861EFE9CBF0074F8C4 /* Starjedi.ttf */; };
+		5635ED891EFE9CBF0074F8C4 /* Unicorn.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5635ED871EFE9CBF0074F8C4 /* Unicorn.ttf */; };
+		5635ED8C1EFE9E320074F8C4 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635ED8B1EFE9E320074F8C4 /* ThemeViewController.swift */; };
 		569F87731EFD18AA006C8EF2 /* GradientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87721EFD18AA006C8EF2 /* GradientTableViewCell.swift */; };
 		569F87751EFD193B006C8EF2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87741EFD193B006C8EF2 /* Config.swift */; };
 		569F87771EFD1AF6006C8EF2 /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87761EFD1AF6006C8EF2 /* GradientViewController.swift */; };
@@ -22,11 +25,14 @@
 		387B0E3BA793B72979916A6A /* Pods-AnimationSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationSwift/Pods-AnimationSwift.release.xcconfig"; sourceTree = "<group>"; };
 		5632BFEA1EDD9B5600605018 /* AnimationSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5632BFED1EDD9B5600605018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5632BFEF1EDD9B5600605018 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5632BFF21EDD9B5600605018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5632BFF41EDD9B5600605018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5632BFF71EDD9B5600605018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5632BFF91EDD9B5600605018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5635ED841EFE83590074F8C4 /* AnimateTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateTableController.swift; sourceTree = "<group>"; };
+		5635ED861EFE9CBF0074F8C4 /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
+		5635ED871EFE9CBF0074F8C4 /* Unicorn.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unicorn.ttf; sourceTree = "<group>"; };
+		5635ED8B1EFE9E320074F8C4 /* ThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		569F87721EFD18AA006C8EF2 /* GradientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientTableViewCell.swift; sourceTree = "<group>"; };
 		569F87741EFD193B006C8EF2 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		569F87761EFD1AF6006C8EF2 /* GradientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
@@ -75,16 +81,27 @@
 		5632BFEC1EDD9B5600605018 /* AnimationSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5635ED8A1EFE9D4E0074F8C4 /* Theme */,
 				569F87711EFD1891006C8EF2 /* Gradient */,
 				5632BFED1EDD9B5600605018 /* AppDelegate.swift */,
-				5632BFEF1EDD9B5600605018 /* ViewController.swift */,
+				5635ED841EFE83590074F8C4 /* AnimateTableController.swift */,
 				5632BFF11EDD9B5600605018 /* Main.storyboard */,
 				5632BFF41EDD9B5600605018 /* Assets.xcassets */,
 				5632BFF61EDD9B5600605018 /* LaunchScreen.storyboard */,
 				5632BFF91EDD9B5600605018 /* Info.plist */,
 				569F87741EFD193B006C8EF2 /* Config.swift */,
+				5635ED861EFE9CBF0074F8C4 /* Starjedi.ttf */,
+				5635ED871EFE9CBF0074F8C4 /* Unicorn.ttf */,
 			);
 			path = AnimationSwift;
+			sourceTree = "<group>";
+		};
+		5635ED8A1EFE9D4E0074F8C4 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				5635ED8B1EFE9E320074F8C4 /* ThemeViewController.swift */,
+			);
+			name = Theme;
 			sourceTree = "<group>";
 		};
 		569F87711EFD1891006C8EF2 /* Gradient */ = {
@@ -168,7 +185,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5632BFF81EDD9B5600605018 /* LaunchScreen.storyboard in Resources */,
+				5635ED891EFE9CBF0074F8C4 /* Unicorn.ttf in Resources */,
 				5632BFF51EDD9B5600605018 /* Assets.xcassets in Resources */,
+				5635ED881EFE9CBF0074F8C4 /* Starjedi.ttf in Resources */,
 				5632BFF31EDD9B5600605018 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,10 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5632BFF01EDD9B5600605018 /* ViewController.swift in Sources */,
+				5635ED8C1EFE9E320074F8C4 /* ThemeViewController.swift in Sources */,
 				569F87751EFD193B006C8EF2 /* Config.swift in Sources */,
 				569F87771EFD1AF6006C8EF2 /* GradientViewController.swift in Sources */,
 				569F87731EFD18AA006C8EF2 /* GradientTableViewCell.swift in Sources */,
+				5635ED851EFE83590074F8C4 /* AnimateTableController.swift in Sources */,
 				5632BFEE1EDD9B5600605018 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

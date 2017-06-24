@@ -91,20 +91,26 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Cache/Cache.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Fakery/Fakery.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Hero/Hero.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Hue/Hue.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Spots/Spots.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Sugar/Sugar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftHash/SwiftHash.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftIconFont/SwiftIconFont.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Tailor/Tailor.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Themes/Themes.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Cache/Cache.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Fakery/Fakery.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Hero/Hero.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Hue/Hue.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Spots/Spots.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Sugar/Sugar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftHash/SwiftHash.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftIconFont/SwiftIconFont.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Tailor/Tailor.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Themes/Themes.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

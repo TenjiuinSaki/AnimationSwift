@@ -10,6 +10,7 @@ import UIKit
 import Spots
 import Fakery
 import Hue
+import SwiftIconFont
 
 class GradientViewController: SpotsController {
     
@@ -60,6 +61,15 @@ class GradientViewController: SpotsController {
 
         // Do any additional setup after loading the view.
         
+        guard let navigationController = navigationController else { return }
+        
+        navigationController.view.layer.insertSublayer(gradient, at: 0)
+        gradient.timeOffset = 0  //设置为动画起始状态
+        gradient.add(animation, forKey: "change_colors")
+        
+        let image = UIImage.icon(from: .Ionicon, code: "ios-close-empty", imageSize: CGSize(width: 36, height: 36), ofSize: 36)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(hero_dismissViewController))
+        
         scrollView.contentInset.bottom = 20     //设置底边距
         
         // 给ComponentModel的设置数据源，刷新TableView
@@ -68,15 +78,6 @@ class GradientViewController: SpotsController {
         })
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        guard let navigationController = navigationController else { return }
-        
-        navigationController.view.layer.insertSublayer(gradient, at: 0)
-        gradient.timeOffset = 0  //设置为动画起始状态
-        gradient.add(animation, forKey: "change_colors")
-    }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateGradient()

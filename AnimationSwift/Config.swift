@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Themes
 
 struct Screen {
     static let width = UIScreen.main.bounds.size.width
@@ -32,3 +33,16 @@ struct Font {
     static let cell = UIFont(name: "Avenir-Medium", size: 18)!
     
 }
+
+struct MyTheme: Theme {
+    let topImage: UIImage
+    let foreColor: UIColor
+    let backgroundColor: UIColor
+    let titleFont: UIFont
+    let barStyle: UIBarStyle
+    
+}
+
+let dayTheme = MyTheme(topImage: #imageLiteral(resourceName: "unicorn"), foreColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), backgroundColor: #colorLiteral(red: 0.9507043494, green: 0.9727312591, blue: 0.9612837765, alpha: 1), titleFont: UIFont(name: "Unicorns are Awesome", size: 14)!, barStyle: .default)
+let nightTheme = MyTheme(topImage: #imageLiteral(resourceName: "night"), foreColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), backgroundColor: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), titleFont: UIFont(name: "Star Jedi", size: 12)!, barStyle: .black)
+
