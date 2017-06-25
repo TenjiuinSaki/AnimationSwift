@@ -14,7 +14,7 @@ import SwiftIconFont
 
 class GradientViewController: SpotsController {
     
-    let faker = Faker() //造假数据
+    
     
     lazy var gradient: CAGradientLayer =  {
         return [Color.color1, Color.color2].gradient({ (gradient) -> CAGradientLayer in
@@ -108,6 +108,7 @@ class GradientViewController: SpotsController {
 
     func generateItems(counts: Int) -> [Item] {
         var items = [Item]()
+        let faker = Faker() //造假数据
         for _ in 1...counts {
             items.append(Item(title: faker.lorem.sentence(), kind: "gradient_cell"))        //设置数据源和重用标识符
         }

@@ -72,7 +72,7 @@ class AnimateTableController: UITableViewController {
     }
     
     func themeViewController() -> UIViewController {
-        let themeViewController = ThemeViewController()
+        let themeViewController = ThemeViewController(title: "Theme")
         let nav = UINavigationController(rootViewController: themeViewController)
         return nav
     }

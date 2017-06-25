@@ -15,6 +15,8 @@
 		5635ED881EFE9CBF0074F8C4 /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5635ED861EFE9CBF0074F8C4 /* Starjedi.ttf */; };
 		5635ED891EFE9CBF0074F8C4 /* Unicorn.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5635ED871EFE9CBF0074F8C4 /* Unicorn.ttf */; };
 		5635ED8C1EFE9E320074F8C4 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635ED8B1EFE9E320074F8C4 /* ThemeViewController.swift */; };
+		565097691EFF709D00D7ED61 /* ThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565097681EFF709D00D7ED61 /* ThemeCell.swift */; };
+		5650976B1EFF71E400D7ED61 /* ThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5650976A1EFF71E400D7ED61 /* ThemeCell.xib */; };
 		569F87731EFD18AA006C8EF2 /* GradientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87721EFD18AA006C8EF2 /* GradientTableViewCell.swift */; };
 		569F87751EFD193B006C8EF2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87741EFD193B006C8EF2 /* Config.swift */; };
 		569F87771EFD1AF6006C8EF2 /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87761EFD1AF6006C8EF2 /* GradientViewController.swift */; };
@@ -33,6 +35,8 @@
 		5635ED861EFE9CBF0074F8C4 /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
 		5635ED871EFE9CBF0074F8C4 /* Unicorn.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unicorn.ttf; sourceTree = "<group>"; };
 		5635ED8B1EFE9E320074F8C4 /* ThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
+		565097681EFF709D00D7ED61 /* ThemeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeCell.swift; sourceTree = "<group>"; };
+		5650976A1EFF71E400D7ED61 /* ThemeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThemeCell.xib; sourceTree = "<group>"; };
 		569F87721EFD18AA006C8EF2 /* GradientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientTableViewCell.swift; sourceTree = "<group>"; };
 		569F87741EFD193B006C8EF2 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		569F87761EFD1AF6006C8EF2 /* GradientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				5635ED8B1EFE9E320074F8C4 /* ThemeViewController.swift */,
+				565097681EFF709D00D7ED61 /* ThemeCell.swift */,
+				5650976A1EFF71E400D7ED61 /* ThemeCell.xib */,
 			);
 			name = Theme;
 			sourceTree = "<group>";
@@ -185,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5632BFF81EDD9B5600605018 /* LaunchScreen.storyboard in Resources */,
+				5650976B1EFF71E400D7ED61 /* ThemeCell.xib in Resources */,
 				5635ED891EFE9CBF0074F8C4 /* Unicorn.ttf in Resources */,
 				5632BFF51EDD9B5600605018 /* Assets.xcassets in Resources */,
 				5635ED881EFE9CBF0074F8C4 /* Starjedi.ttf in Resources */,
@@ -253,6 +260,7 @@
 				569F87731EFD18AA006C8EF2 /* GradientTableViewCell.swift in Sources */,
 				5635ED851EFE83590074F8C4 /* AnimateTableController.swift in Sources */,
 				5632BFEE1EDD9B5600605018 /* AppDelegate.swift in Sources */,
+				565097691EFF709D00D7ED61 /* ThemeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,9 +40,24 @@ struct MyTheme: Theme {
     let backgroundColor: UIColor
     let titleFont: UIFont
     let barStyle: UIBarStyle
+    let cellColor: UIColor
+    let cellHeight: CGFloat
     
 }
 
-let dayTheme = MyTheme(topImage: #imageLiteral(resourceName: "unicorn"), foreColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), backgroundColor: #colorLiteral(red: 0.9507043494, green: 0.9727312591, blue: 0.9612837765, alpha: 1), titleFont: UIFont(name: "Unicorns are Awesome", size: 14)!, barStyle: .default)
-let nightTheme = MyTheme(topImage: #imageLiteral(resourceName: "night"), foreColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), backgroundColor: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), titleFont: UIFont(name: "Star Jedi", size: 12)!, barStyle: .black)
+let dayTheme = MyTheme(topImage: #imageLiteral(resourceName: "unicorn"),
+                       foreColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
+                       backgroundColor: #colorLiteral(red: 0.9507043494, green: 0.9727312591, blue: 0.9612837765, alpha: 1),
+                       titleFont: UIFont(name: "Unicorns are Awesome", size: 14)!,
+                       barStyle: .default,
+                       cellColor: #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1),
+                       cellHeight: 100)
+
+let nightTheme = MyTheme(topImage: #imageLiteral(resourceName: "night"),
+                         foreColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1),
+                         backgroundColor: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1),
+                         titleFont: UIFont(name: "Star Jedi", size: 12)!,
+                         barStyle: .black,
+                         cellColor: #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1),
+                         cellHeight: 150)
 
