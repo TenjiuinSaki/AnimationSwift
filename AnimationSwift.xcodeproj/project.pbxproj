@@ -17,6 +17,7 @@
 		5635ED8C1EFE9E320074F8C4 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635ED8B1EFE9E320074F8C4 /* ThemeViewController.swift */; };
 		565097691EFF709D00D7ED61 /* ThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565097681EFF709D00D7ED61 /* ThemeCell.swift */; };
 		5650976B1EFF71E400D7ED61 /* ThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5650976A1EFF71E400D7ED61 /* ThemeCell.xib */; };
+		565180171EFFEC2900045766 /* PastelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565180161EFFEC2900045766 /* PastelViewController.swift */; };
 		569F87731EFD18AA006C8EF2 /* GradientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87721EFD18AA006C8EF2 /* GradientTableViewCell.swift */; };
 		569F87751EFD193B006C8EF2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87741EFD193B006C8EF2 /* Config.swift */; };
 		569F87771EFD1AF6006C8EF2 /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87761EFD1AF6006C8EF2 /* GradientViewController.swift */; };
@@ -37,6 +38,7 @@
 		5635ED8B1EFE9E320074F8C4 /* ThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		565097681EFF709D00D7ED61 /* ThemeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeCell.swift; sourceTree = "<group>"; };
 		5650976A1EFF71E400D7ED61 /* ThemeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThemeCell.xib; sourceTree = "<group>"; };
+		565180161EFFEC2900045766 /* PastelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastelViewController.swift; sourceTree = "<group>"; };
 		569F87721EFD18AA006C8EF2 /* GradientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientTableViewCell.swift; sourceTree = "<group>"; };
 		569F87741EFD193B006C8EF2 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		569F87761EFD1AF6006C8EF2 /* GradientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		5632BFEC1EDD9B5600605018 /* AnimationSwift */ = {
 			isa = PBXGroup;
 			children = (
+				565180151EFFEBD100045766 /* Gradient2 */,
 				5635ED8A1EFE9D4E0074F8C4 /* Theme */,
 				569F87711EFD1891006C8EF2 /* Gradient */,
 				5632BFED1EDD9B5600605018 /* AppDelegate.swift */,
@@ -108,6 +111,14 @@
 				5650976A1EFF71E400D7ED61 /* ThemeCell.xib */,
 			);
 			name = Theme;
+			sourceTree = "<group>";
+		};
+		565180151EFFEBD100045766 /* Gradient2 */ = {
+			isa = PBXGroup;
+			children = (
+				565180161EFFEC2900045766 /* PastelViewController.swift */,
+			);
+			name = Gradient2;
 			sourceTree = "<group>";
 		};
 		569F87711EFD1891006C8EF2 /* Gradient */ = {
@@ -259,6 +270,7 @@
 				569F87771EFD1AF6006C8EF2 /* GradientViewController.swift in Sources */,
 				569F87731EFD18AA006C8EF2 /* GradientTableViewCell.swift in Sources */,
 				5635ED851EFE83590074F8C4 /* AnimateTableController.swift in Sources */,
+				565180171EFFEC2900045766 /* PastelViewController.swift in Sources */,
 				5632BFEE1EDD9B5600605018 /* AppDelegate.swift in Sources */,
 				565097691EFF709D00D7ED61 /* ThemeCell.swift in Sources */,
 			);

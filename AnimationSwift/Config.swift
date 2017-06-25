@@ -31,7 +31,7 @@ struct Font {
     
     static let navigationBar = UIFont(name: "Avenir-Heavy", size: 20)!
     static let cell = UIFont(name: "Avenir-Medium", size: 18)!
-    
+    static let header = UIFont(name: "BradleyHandITCTT-Bold", size: 38)!
 }
 
 struct MyTheme: Theme {
@@ -61,3 +61,19 @@ let nightTheme = MyTheme(topImage: #imageLiteral(resourceName: "night"),
                          cellColor: #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1),
                          cellHeight: 150)
 
+
+struct Storyboard {
+    private static let main = UIStoryboard(name: "Main", bundle: nil)
+    
+    static func setRootViewController(_ viewController: UIViewController) {
+        UIApplication.shared.keyWindow?.rootViewController = viewController
+    }
+    
+    static func pastel() -> UIViewController {
+        return main.instantiateViewController(withIdentifier: "pastel")
+    }
+    
+    static func initial() -> UIViewController {
+        return main.instantiateInitialViewController()!
+    }
+}

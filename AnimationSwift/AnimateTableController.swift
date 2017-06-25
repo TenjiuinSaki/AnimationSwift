@@ -34,11 +34,16 @@ class AnimateTableController: UITableViewController {
     ]
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
+        switch indexPath.row {
+        case 0:
             present(gradientViewController(), animated: true, completion: nil)
-        } else {
+        case 1:
+            Storyboard.setRootViewController(Storyboard.pastel())
+        case 2:
             present(themeViewController(), animated: true, completion: nil)
+        default: ()
         }
+
         
     }
     

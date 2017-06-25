@@ -89,10 +89,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ActiveLabel/ActiveLabel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Cache/Cache.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Fakery/Fakery.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Hero/Hero.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Hue/Hue.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Pastel/Pastel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Spots/Spots.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Sugar/Sugar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftHash/SwiftHash.framework"
@@ -101,10 +103,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Themes/Themes.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ActiveLabel/ActiveLabel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Cache/Cache.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Fakery/Fakery.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Hero/Hero.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Hue/Hue.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Pastel/Pastel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Spots/Spots.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Sugar/Sugar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftHash/SwiftHash.framework"

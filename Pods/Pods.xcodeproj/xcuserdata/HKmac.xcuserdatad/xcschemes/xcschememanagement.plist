@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ActiveLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Cache.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -25,6 +30,11 @@
 			<false/>
 		</dict>
 		<key>Hue.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pastel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -67,6 +77,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3B6980DD9ADEF347FD86F804AC6FA243</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>481A2DE87CCC53B450C75302063F2CB1</key>
 		<dict>
 			<key>primary</key>
@@ -77,22 +92,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>536B31CFC2A03682B89AA175CD7EBCB4</key>
+		<key>4F6D335A0EBB87EE4229CA3228C84678</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5832D78CD11E7538D3AA632541836A99</key>
+		<key>61576E674DB43D708C039106D6DFCBB5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>62C30E07926FF13385DEDFE19F721EA2</key>
+		<key>6E5C63700D04F376E8D2697877B8B75E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B7D999CB9BAFCBB2DF26E4DEC641295</key>
+		<key>8E1D092BF86FB8C0ABE055E421219B71</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,12 +117,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>961111E6345EEABDF398AC62BE3CA17C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>969A2EEFD23EFA74B37612859AD2DA65</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD91FB8BF5AF76891D09109778A516F1</key>
+		<key>A1EBDD3BC77EFE921F5EFB115E0E3B3D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,7 +142,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D508B9062CA7D6E12073541BDE392CDA</key>
+		<key>FF78D84339FA11DA357C0C6BEBEBA9BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

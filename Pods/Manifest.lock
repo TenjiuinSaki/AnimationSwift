@@ -1,9 +1,11 @@
 PODS:
+  - ActiveLabel (0.7.1)
   - Cache (3.3.0):
     - SwiftHash (~> 1.4.0)
   - Fakery (2.0.0)
   - Hero (0.3.6)
   - Hue (2.0.1)
+  - Pastel (0.3.0)
   - Spots (6.1.0):
     - Spots/Core (= 6.1.0)
   - Spots/Core (6.1.0):
@@ -16,19 +18,23 @@ PODS:
   - Themes (1.1.0)
 
 DEPENDENCIES:
+  - ActiveLabel
   - Fakery
   - Hero
   - Hue
+  - Pastel
   - Spots
   - Sugar
   - SwiftIconFont
   - Themes
 
 SPEC CHECKSUMS:
+  ActiveLabel: 68625f22775f51c31bb691ca8de20f1e5a3bc825
   Cache: 871805a8a7268feac34f5c10c54506801f0bd4cd
   Fakery: 97b99c23937d2e025d9135c75e2b17351ccd5031
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   Hue: 354caec055fdc9d38b5ef33ca2e7224721843baf
+  Pastel: 738740c84f2b15bbcd96ebe99c4e6c2f5dd42262
   Spots: 826ab6c6f0e31236f3c71e427d8341b8cec07468
   Sugar: e2eb40928c2589bf55977e335a5bc183d09cce24
   SwiftHash: acf0f29032309a5c7a7f625595eade1aca97aca2
@@ -36,6 +42,6 @@ SPEC CHECKSUMS:
   Tailor: caabfebed676fab6e00c0c173e05294ccf89861e
   Themes: 9c5626e1b9d0a5683e5179c00c38077bd0281148
 
-PODFILE CHECKSUM: 30de4c5f526fed4913af73352a192ae7f8fcf1b2
+PODFILE CHECKSUM: 3e2cb9c417d6f8595f8089bb9fd21f6e7ac87b50
 
 COCOAPODS: 1.2.1
