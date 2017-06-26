@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ETNavBarTransparent.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Fakery-Faker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,7 +82,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3B6980DD9ADEF347FD86F804AC6FA243</key>
+		<key>06C6D8CB18211F6E7F8D28BBD584BE88</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0E827055479508EDCD5252A6A6EC6258</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1E1405A04EBB9F42752E372D07AB68AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>29606945A20D91EF24C304B54BD9A97B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4F6D335A0EBB87EE4229CA3228C84678</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>61576E674DB43D708C039106D6DFCBB5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6E5C63700D04F376E8D2697877B8B75E</key>
+		<key>5AA4C431456938616FF30899BA93D9D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,17 +127,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>961111E6345EEABDF398AC62BE3CA17C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>969A2EEFD23EFA74B37612859AD2DA65</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A1EBDD3BC77EFE921F5EFB115E0E3B3D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AF0286B291AEFB935BAAA07D027B8206</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -142,7 +152,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FF78D84339FA11DA357C0C6BEBEBA9BA</key>
+		<key>D19587F0A4BFE0F715BB42580236D311</key>
 		<dict>
 			<key>primary</key>
 			<true/>

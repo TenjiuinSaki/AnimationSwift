@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'AF0286B291AEFB935BAAA07D027B8206'
-               BlueprintName = 'Themes'
+               BlueprintIdentifier = '06C6D8CB18211F6E7F8D28BBD584BE88'
+               BlueprintName = 'ETNavBarTransparent'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Themes.framework'>
+               BuildableName = 'ETNavBarTransparent.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

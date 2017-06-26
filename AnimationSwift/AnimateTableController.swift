@@ -42,6 +42,8 @@ class AnimateTableController: UITableViewController {
             Storyboard.setRootViewController(Storyboard.pastel())
         case 2:
             present(themeViewController(), animated: true, completion: nil)
+        case 3:
+            navigationController?.pushViewController(AlphaTableViewController(), animated: true)
         default: ()
         }
 
