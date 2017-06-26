@@ -192,10 +192,17 @@
                                     <action selector="closeAction:" destination="v30-Sf-wiz" eventType="touchUpInside" id="8d1-RK-mqv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not have an account？Sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNi-sY-PV0" customClass="ActiveLabel" customModule="ActiveLabel">
+                                <rect key="frame" x="50" y="431" width="275" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HHd-Lx-vV1" firstAttribute="height" secondItem="SD2-T8-aTA" secondAttribute="height" id="3Tn-qa-a1U"/>
+                            <constraint firstItem="sNi-sY-PV0" firstAttribute="top" secondItem="GjX-2a-P18" secondAttribute="bottom" constant="20" id="6Ef-aP-1ix"/>
                             <constraint firstItem="HHd-Lx-vV1" firstAttribute="leading" secondItem="SD2-T8-aTA" secondAttribute="leading" id="9gc-rX-EMI"/>
                             <constraint firstItem="GjX-2a-P18" firstAttribute="height" secondItem="SD2-T8-aTA" secondAttribute="height" id="BES-qv-kCt"/>
                             <constraint firstItem="HHd-Lx-vV1" firstAttribute="top" secondItem="SD2-T8-aTA" secondAttribute="bottom" constant="15" id="C4c-rd-onr"/>
@@ -207,13 +214,16 @@
                             <constraint firstAttribute="trailing" secondItem="SD2-T8-aTA" secondAttribute="trailing" constant="50" id="cdq-hN-e32"/>
                             <constraint firstItem="HHd-Lx-vV1" firstAttribute="trailing" secondItem="SD2-T8-aTA" secondAttribute="trailing" id="g9Y-xK-21g"/>
                             <constraint firstItem="4GI-KF-exD" firstAttribute="centerX" secondItem="cWo-Oe-uwa" secondAttribute="centerX" id="kbw-3F-L2x"/>
+                            <constraint firstItem="sNi-sY-PV0" firstAttribute="trailing" secondItem="SD2-T8-aTA" secondAttribute="trailing" id="naV-qP-TG6"/>
                             <constraint firstItem="SD2-T8-aTA" firstAttribute="leading" secondItem="cWo-Oe-uwa" secondAttribute="leading" constant="50" id="ny1-49-Wr9"/>
                             <constraint firstItem="GjX-2a-P18" firstAttribute="top" secondItem="HHd-Lx-vV1" secondAttribute="bottom" constant="15" id="ojV-y2-n3v"/>
+                            <constraint firstItem="sNi-sY-PV0" firstAttribute="leading" secondItem="SD2-T8-aTA" secondAttribute="leading" id="rvg-0Y-XdJ"/>
                             <constraint firstItem="GjX-2a-P18" firstAttribute="leading" secondItem="SD2-T8-aTA" secondAttribute="leading" id="ss5-ro-23D"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OiO-db-7XC"/>
                     <connections>
+                        <outlet property="activeLabel" destination="sNi-sY-PV0" id="Ooq-Mb-cIM"/>
                         <outlet property="closeButton" destination="yT9-kx-JLP" id="zww-dd-eBW"/>
                         <outlet property="headerLabel" destination="4GI-KF-exD" id="HTp-cl-Aj2"/>
                         <outlet property="loginButton" destination="GjX-2a-P18" id="XwZ-BI-hZQ"/>

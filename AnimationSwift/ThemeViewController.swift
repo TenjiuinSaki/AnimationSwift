@@ -30,7 +30,7 @@ class ThemeViewController: SpotsController {
             weakSelf.navigationController?.navigationBar.setBackgroundImage(theme.topImage, for: .default)
             weakSelf.navigationController?.navigationBar.tintColor = theme.foreColor
             weakSelf.navigationController?.navigationBar.barStyle = theme.barStyle
-            weakSelf.refreshData()
+            weakSelf.refreshData()  //更新行高需重新设置items
         }
         
         
