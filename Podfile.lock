@@ -2,6 +2,8 @@ PODS:
   - ActiveLabel (0.7.1)
   - Cache (3.3.0):
     - SwiftHash (~> 1.4.0)
+  - CRRefresh (1.0.5)
+  - DOFavoriteButton (0.0.4)
   - ETNavBarTransparent (1.0.8)
   - Fakery (2.0.0)
   - Hero (0.3.6)
@@ -20,6 +22,8 @@ PODS:
 
 DEPENDENCIES:
   - ActiveLabel
+  - CRRefresh
+  - DOFavoriteButton (from `https://github.com/okmr-d/DOFavoriteButton.git`)
   - ETNavBarTransparent
   - Fakery
   - Hero
@@ -30,9 +34,20 @@ DEPENDENCIES:
   - SwiftIconFont
   - Themes
 
+EXTERNAL SOURCES:
+  DOFavoriteButton:
+    :git: https://github.com/okmr-d/DOFavoriteButton.git
+
+CHECKOUT OPTIONS:
+  DOFavoriteButton:
+    :commit: 43c65253d4c14e596a511354ca0e0aac0ec2bd5c
+    :git: https://github.com/okmr-d/DOFavoriteButton.git
+
 SPEC CHECKSUMS:
   ActiveLabel: 68625f22775f51c31bb691ca8de20f1e5a3bc825
   Cache: 871805a8a7268feac34f5c10c54506801f0bd4cd
+  CRRefresh: 718be57647db922a4a3af3f17fc41289145d8e83
+  DOFavoriteButton: 866e15af173d2dd5233971a1f657a5f31d2491d5
   ETNavBarTransparent: eacdaa11e4aa364107bb8af4be3bd29dc7ae9254
   Fakery: 97b99c23937d2e025d9135c75e2b17351ccd5031
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
@@ -45,6 +60,6 @@ SPEC CHECKSUMS:
   Tailor: caabfebed676fab6e00c0c173e05294ccf89861e
   Themes: 9c5626e1b9d0a5683e5179c00c38077bd0281148
 
-PODFILE CHECKSUM: 5f0537f9548652020b42a048e0920177a3e2d04e
+PODFILE CHECKSUM: 1f77070aee0c836dc348ce06c1cf962ecb5a8126
 
 COCOAPODS: 1.2.1

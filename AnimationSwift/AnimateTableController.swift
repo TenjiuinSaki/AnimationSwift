@@ -44,6 +44,8 @@ class AnimateTableController: UITableViewController {
             present(themeViewController(), animated: true, completion: nil)
         case 3:
             navigationController?.pushViewController(AlphaTableViewController(), animated: true)
+//        case 4:
+//            navigationController?.pushViewController(ButtonsViewController(), animated: true)
         default: ()
         }
 
@@ -75,6 +77,7 @@ class AnimateTableController: UITableViewController {
         navigationBar.barTintColor = #colorLiteral(red: 0.9921568627, green: 0.262745098, blue: 0.2509803922, alpha: 1)
         navigationBar.tintColor = Color.navigationBarForeground //导航栏按钮颜色
         navigationBar.shadowImage = UIImage()   //取消分割线
+        
         
         return nav
     }

@@ -19,6 +19,9 @@
 		565097691EFF709D00D7ED61 /* ThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565097681EFF709D00D7ED61 /* ThemeCell.swift */; };
 		5650976B1EFF71E400D7ED61 /* ThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5650976A1EFF71E400D7ED61 /* ThemeCell.xib */; };
 		565180171EFFEC2900045766 /* PastelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565180161EFFEC2900045766 /* PastelViewController.swift */; };
+		568175671F025AD00020D3E5 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568175661F025AD00020D3E5 /* ButtonsViewController.swift */; };
+		5681756A1F0262680020D3E5 /* ButtonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568175681F0262680020D3E5 /* ButtonViewCell.swift */; };
+		5681756B1F0262680020D3E5 /* ButtonViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 568175691F0262680020D3E5 /* ButtonViewCell.xib */; };
 		569F87731EFD18AA006C8EF2 /* GradientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87721EFD18AA006C8EF2 /* GradientTableViewCell.swift */; };
 		569F87751EFD193B006C8EF2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87741EFD193B006C8EF2 /* Config.swift */; };
 		569F87771EFD1AF6006C8EF2 /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87761EFD1AF6006C8EF2 /* GradientViewController.swift */; };
@@ -41,6 +44,9 @@
 		565097681EFF709D00D7ED61 /* ThemeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeCell.swift; sourceTree = "<group>"; };
 		5650976A1EFF71E400D7ED61 /* ThemeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThemeCell.xib; sourceTree = "<group>"; };
 		565180161EFFEC2900045766 /* PastelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastelViewController.swift; sourceTree = "<group>"; };
+		568175661F025AD00020D3E5 /* ButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
+		568175681F0262680020D3E5 /* ButtonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewCell.swift; sourceTree = "<group>"; };
+		568175691F0262680020D3E5 /* ButtonViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonViewCell.xib; sourceTree = "<group>"; };
 		569F87721EFD18AA006C8EF2 /* GradientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientTableViewCell.swift; sourceTree = "<group>"; };
 		569F87741EFD193B006C8EF2 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		569F87761EFD1AF6006C8EF2 /* GradientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 		5632BFEC1EDD9B5600605018 /* AnimationSwift */ = {
 			isa = PBXGroup;
 			children = (
+				568175651F025AB10020D3E5 /* Button */,
 				563B918F1F009F0500986AC0 /* NavigationBar */,
 				565180151EFFEBD100045766 /* Gradient2 */,
 				5635ED8A1EFE9D4E0074F8C4 /* Theme */,
@@ -130,6 +137,16 @@
 				565180161EFFEC2900045766 /* PastelViewController.swift */,
 			);
 			name = Gradient2;
+			sourceTree = "<group>";
+		};
+		568175651F025AB10020D3E5 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				568175661F025AD00020D3E5 /* ButtonsViewController.swift */,
+				568175681F0262680020D3E5 /* ButtonViewCell.swift */,
+				568175691F0262680020D3E5 /* ButtonViewCell.xib */,
+			);
+			name = Button;
 			sourceTree = "<group>";
 		};
 		569F87711EFD1891006C8EF2 /* Gradient */ = {
@@ -213,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5632BFF81EDD9B5600605018 /* LaunchScreen.storyboard in Resources */,
+				5681756B1F0262680020D3E5 /* ButtonViewCell.xib in Resources */,
 				5650976B1EFF71E400D7ED61 /* ThemeCell.xib in Resources */,
 				5635ED891EFE9CBF0074F8C4 /* Unicorn.ttf in Resources */,
 				5632BFF51EDD9B5600605018 /* Assets.xcassets in Resources */,
@@ -278,10 +296,12 @@
 			files = (
 				5635ED8C1EFE9E320074F8C4 /* ThemeViewController.swift in Sources */,
 				569F87751EFD193B006C8EF2 /* Config.swift in Sources */,
+				568175671F025AD00020D3E5 /* ButtonsViewController.swift in Sources */,
 				569F87771EFD1AF6006C8EF2 /* GradientViewController.swift in Sources */,
 				569F87731EFD18AA006C8EF2 /* GradientTableViewCell.swift in Sources */,
 				5635ED851EFE83590074F8C4 /* AnimateTableController.swift in Sources */,
 				565180171EFFEC2900045766 /* PastelViewController.swift in Sources */,
+				5681756A1F0262680020D3E5 /* ButtonViewCell.swift in Sources */,
 				5632BFEE1EDD9B5600605018 /* AppDelegate.swift in Sources */,
 				563B91911F009F7500986AC0 /* AlphaTableViewController.swift in Sources */,
 				565097691EFF709D00D7ED61 /* ThemeCell.swift in Sources */,

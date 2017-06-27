@@ -8,6 +8,7 @@
 
 import UIKit
 import Themes
+import Cache
 
 struct Screen {
     static let width = UIScreen.main.bounds.size.width
@@ -40,6 +41,7 @@ struct MyTheme: Theme {
     let backgroundColor: UIColor
     let titleFont: UIFont
     let barStyle: UIBarStyle
+    let statusBarStyle: UIStatusBarStyle
     let cellColor: UIColor
     let cellHeight: CGFloat
     
@@ -50,6 +52,7 @@ let dayTheme = MyTheme(topImage: #imageLiteral(resourceName: "unicorn"),
                        backgroundColor: #colorLiteral(red: 0.9507043494, green: 0.9727312591, blue: 0.9612837765, alpha: 1),
                        titleFont: UIFont(name: "Unicorns are Awesome", size: 14)!,
                        barStyle: .default,
+                       statusBarStyle: .default,
                        cellColor: #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1),
                        cellHeight: 100)
 
@@ -58,6 +61,7 @@ let nightTheme = MyTheme(topImage: #imageLiteral(resourceName: "night"),
                          backgroundColor: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1),
                          titleFont: UIFont(name: "Star Jedi", size: 12)!,
                          barStyle: .black,
+                         statusBarStyle: .lightContent,
                          cellColor: #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1),
                          cellHeight: 150)
 
@@ -77,3 +81,14 @@ struct Storyboard {
         return main.instantiateInitialViewController()!
     }
 }
+
+
+let customCache = HybridCache(name: "Custom", config: Config(
+    expiry: .date(Date().addingTimeInterval(60)),   //过期时间1分钟
+    memoryCountLimit: 0,
+    memoryTotalCostLimit: 0,
+    maxDiskSize: 10000,                             //缓存大小10M
+    cacheDirectory: NSSearchPathForDirectoriesInDomains(
+        .documentDirectory,
+        FileManager.SearchPathDomainMask.userDomainMask,
+        true).first! + "/cache-in-documents"))

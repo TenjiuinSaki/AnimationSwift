@@ -114,4 +114,8 @@ class GradientViewController: SpotsController {
         }
         return items
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }

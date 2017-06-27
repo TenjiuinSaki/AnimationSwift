@@ -8,10 +8,13 @@
 
 import UIKit
 import ETNavBarTransparent
+import CRRefresh
 
 class AlphaTableViewController: UITableViewController {
 
     var statusBarLight = true
+    var isFirstAppear = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +22,20 @@ class AlphaTableViewController: UITableViewController {
         navBarBgAlpha = 0
         navBarTintColor = .white
         
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.cr.addHeadRefresh(animator: SlackLoadingAnimator()) { [unowned self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                self.tableView.cr.endHeaderRefresh()
+                self.tableView.cr.resetNoMore()
+            })
+        }
+        tableView.cr.addFootRefresh(animator: NormalFooterAnimator()) { [unowned self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                self.tableView.cr.endLoadingMore()
+                self.tableView.cr.noticeNoMoreData()
+            })
+        }
         
         let imageView = UIImageView(image: #imageLiteral(resourceName: "day"))
         imageView.frame = CGRect(x: 0, y: 0, width: Screen.width, height: 200)
@@ -27,6 +43,8 @@ class AlphaTableViewController: UITableViewController {
         
         // 取消自动向下偏移
         automaticallyAdjustsScrollViewInsets = false
+        
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -35,16 +53,12 @@ class AlphaTableViewController: UITableViewController {
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
-        if offsetY > 200 {  // 减少一些无用的判断
-            return
-        }
         
         let showNavBarOffset = 200 - topLayoutGuide.length  // 200 - 64 = 136
         
-        // 当200 > offset > 136
+        // 当200 > offsetY > 136, 范围64
         if offsetY > showNavBarOffset {
-            var navAlpha = (offsetY - showNavBarOffset) / 40
-            print(navAlpha)
+            var navAlpha = (offsetY - showNavBarOffset) / 40    //40的偏移量由透明转为不透明
             navAlpha = min(1, navAlpha)
             navBarBgAlpha = navAlpha
             if navAlpha > 0.8 {

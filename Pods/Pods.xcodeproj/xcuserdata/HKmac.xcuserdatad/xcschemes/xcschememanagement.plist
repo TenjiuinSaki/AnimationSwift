@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CRRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Cache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DOFavoriteButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -87,17 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0E827055479508EDCD5252A6A6EC6258</key>
+		<key>0DBD9B66C4EA02FB809EEEE7BB645435</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1E1405A04EBB9F42752E372D07AB68AF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>29606945A20D91EF24C304B54BD9A97B</key>
+		<key>168AD70E3973B1232B92EF4AD24E5FBA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,7 +117,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5AA4C431456938616FF30899BA93D9D9</key>
+		<key>61464E42E704F31F6907F85C5005BF95</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7465612D8EFF5189D9E93CCC3CC69460</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8D7A0275412ED9BA21940359EB54A34D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -137,12 +152,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AF0286B291AEFB935BAAA07D027B8206</key>
+		<key>B2542602E50EDF091ADB18B4688DF34F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2542602E50EDF091ADB18B4688DF34F</key>
+		<key>C147FB851C4B97A7B663598589B9ABA5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,7 +167,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D19587F0A4BFE0F715BB42580236D311</key>
+		<key>D5E9735E47530155FA0B3F2E3A342A21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D997D86D6FA7AD18B072A7A39A2410A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

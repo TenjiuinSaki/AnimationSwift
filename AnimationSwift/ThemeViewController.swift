@@ -17,7 +17,10 @@ class ThemeViewController: SpotsController {
     let nightImage = UIImage.icon(from: .Ionicon, code: "ios-sunny", imageSize: CGSize(width: 36, height: 36), ofSize: 36)
     
     var items = [Item]()
-    
+    var statusBarStyle = UIStatusBarStyle.default
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return statusBarStyle
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,8 @@ class ThemeViewController: SpotsController {
             weakSelf.navigationController?.navigationBar.setBackgroundImage(theme.topImage, for: .default)
             weakSelf.navigationController?.navigationBar.tintColor = theme.foreColor
             weakSelf.navigationController?.navigationBar.barStyle = theme.barStyle
+            weakSelf.statusBarStyle = theme.statusBarStyle
+            weakSelf.setNeedsStatusBarAppearanceUpdate()    //更改statusBarStyle
             weakSelf.refreshData()  //更新行高需重新设置items
         }
         
@@ -39,7 +44,10 @@ class ThemeViewController: SpotsController {
         items = generateItems(counts: 20)
         
         refreshData()
+        
     }
+    
+    
     
     /// 刷新数据
     func refreshData() {
