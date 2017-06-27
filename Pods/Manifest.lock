@@ -17,6 +17,7 @@ PODS:
   - Sugar (3.1.2)
   - SwiftHash (1.4.0)
   - SwiftIconFont (2.6.0)
+  - SwiftMessages (3.3.4)
   - Tailor (2.2.1)
   - Themes (1.1.0)
 
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - Spots
   - Sugar
   - SwiftIconFont
+  - SwiftMessages
   - Themes
 
 EXTERNAL SOURCES:
@@ -57,9 +59,10 @@ SPEC CHECKSUMS:
   Sugar: e2eb40928c2589bf55977e335a5bc183d09cce24
   SwiftHash: acf0f29032309a5c7a7f625595eade1aca97aca2
   SwiftIconFont: bbe1f32e1e16bac87dad8566afc80132cb8d072c
+  SwiftMessages: 1172842c4d4af818704f90c50ec8dc597e55c9af
   Tailor: caabfebed676fab6e00c0c173e05294ccf89861e
   Themes: 9c5626e1b9d0a5683e5179c00c38077bd0281148
 
-PODFILE CHECKSUM: 1f77070aee0c836dc348ce06c1cf962ecb5a8126
+PODFILE CHECKSUM: a4478f82d7d828513bcda0345a83f7fa82709495
 
 COCOAPODS: 1.2.1

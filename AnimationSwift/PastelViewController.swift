@@ -10,6 +10,7 @@ import UIKit
 import Pastel
 import SwiftIconFont
 import ActiveLabel
+import SwiftMessages
 
 class PastelViewController: UIViewController {
 
@@ -74,9 +75,19 @@ class PastelViewController: UIViewController {
                 return attr
             }
             label.handleCustomTap(for: customType, handler: { (str) in
-                print(str)
+                let message = MessageView.viewFromNib(layout: .CardView)
+                message.configureContent(body: "注册还没做，敬请期待")
+                message.configureTheme(backgroundColor: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), foregroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), iconImage: nil, iconText: "😅")
+                message.button?.isHidden = true
+                message.titleLabel?.isHidden = true
+                message.configureDropShadow()
+                
+                var config = SwiftMessages.defaultConfig
+                config.presentationContext = .window(windowLevel: UIWindowLevelNormal)
+                SwiftMessages.show(config: config, view: message)
             })
         }
+        
         
         
     }

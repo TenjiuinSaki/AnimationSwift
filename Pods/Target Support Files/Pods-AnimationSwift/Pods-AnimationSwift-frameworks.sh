@@ -102,6 +102,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Sugar/Sugar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftHash/SwiftHash.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftIconFont/SwiftIconFont.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftMessages/SwiftMessages.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Tailor/Tailor.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Themes/Themes.framework"
 fi
@@ -119,6 +120,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Sugar/Sugar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftHash/SwiftHash.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftIconFont/SwiftIconFont.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftMessages/SwiftMessages.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Tailor/Tailor.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Themes/Themes.framework"
 fi
