@@ -8,20 +8,24 @@
 
 import UIKit
 import Spots
+import LTMorphingLabel
+import SwiftyTimer
 
-class GradientTableViewCell: UIView, ItemConfigurable {
+class GradientTableViewCell: UITableViewCell, ItemConfigurable {
     
-    lazy var textLabel: UILabel = { [unowned self] in
-        let label = UILabel()
+    lazy var titleLabel: UILabel = { [unowned self] in
+        let label = LTMorphingLabel()
+        label.morphingEffect = .fall
         label.frame = CGRect(x: 10, y: 10, width: Screen.width - 20, height: 20)
         label.textColor = Color.cellForeground
         label.font = Font.cell
         self.addSubview(label)
         return label
+        
     }()
     
     func configure(with item: Item) {
-        textLabel.text = item.title
+        titleLabel.text = item.title
     }
     
     func computeSize(for item: Item) -> CGSize {

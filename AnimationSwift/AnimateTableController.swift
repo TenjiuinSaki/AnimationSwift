@@ -44,8 +44,9 @@ class AnimateTableController: UITableViewController {
             present(themeViewController(), animated: true, completion: nil)
         case 3:
             navigationController?.pushViewController(AlphaTableViewController(), animated: true)
-//        case 4:
-//            navigationController?.pushViewController(ButtonsViewController(), animated: true)
+        case 5:
+            navigationController?.pushViewController(LabelViewController(), animated: true)
+            
         default: ()
         }
 

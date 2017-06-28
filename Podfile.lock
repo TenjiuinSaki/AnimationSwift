@@ -6,9 +6,12 @@ PODS:
   - DOFavoriteButton (0.0.4)
   - ETNavBarTransparent (1.0.8)
   - Fakery (2.0.0)
+  - GlitchLabel (2.0.0)
   - Hero (0.3.6)
   - Hue (2.0.1)
+  - LTMorphingLabel (0.5.0)
   - Pastel (0.3.0)
+  - SnapKit (3.2.0)
   - Spots (6.1.0):
     - Spots/Core (= 6.1.0)
   - Spots/Core (6.1.0):
@@ -18,6 +21,7 @@ PODS:
   - SwiftHash (1.4.0)
   - SwiftIconFont (2.6.0)
   - SwiftMessages (3.3.4)
+  - SwiftyTimer (2.0.0)
   - Tailor (2.2.1)
   - Themes (1.1.0)
 
@@ -27,13 +31,17 @@ DEPENDENCIES:
   - DOFavoriteButton (from `https://github.com/okmr-d/DOFavoriteButton.git`)
   - ETNavBarTransparent
   - Fakery
+  - GlitchLabel
   - Hero
   - Hue
+  - LTMorphingLabel
   - Pastel
+  - SnapKit
   - Spots
   - Sugar
   - SwiftIconFont
   - SwiftMessages
+  - SwiftyTimer
   - Themes
 
 EXTERNAL SOURCES:
@@ -52,17 +60,21 @@ SPEC CHECKSUMS:
   DOFavoriteButton: 866e15af173d2dd5233971a1f657a5f31d2491d5
   ETNavBarTransparent: eacdaa11e4aa364107bb8af4be3bd29dc7ae9254
   Fakery: 97b99c23937d2e025d9135c75e2b17351ccd5031
+  GlitchLabel: 65773d1df358ef66c8daa40428eb79bd04e7a976
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   Hue: 354caec055fdc9d38b5ef33ca2e7224721843baf
+  LTMorphingLabel: bc170be74b219b7dae0e5543a44676d16da70ff7
   Pastel: 738740c84f2b15bbcd96ebe99c4e6c2f5dd42262
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   Spots: 826ab6c6f0e31236f3c71e427d8341b8cec07468
   Sugar: e2eb40928c2589bf55977e335a5bc183d09cce24
   SwiftHash: acf0f29032309a5c7a7f625595eade1aca97aca2
   SwiftIconFont: bbe1f32e1e16bac87dad8566afc80132cb8d072c
   SwiftMessages: 1172842c4d4af818704f90c50ec8dc597e55c9af
+  SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
   Tailor: caabfebed676fab6e00c0c173e05294ccf89861e
   Themes: 9c5626e1b9d0a5683e5179c00c38077bd0281148
 
-PODFILE CHECKSUM: a4478f82d7d828513bcda0345a83f7fa82709495
+PODFILE CHECKSUM: 6d49d3d2d5e8cf2e8c94fc96c9d8f2bba3768f06
 
 COCOAPODS: 1.2.1

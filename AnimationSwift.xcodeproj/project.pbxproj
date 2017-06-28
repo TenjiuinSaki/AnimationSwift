@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5631DA091F029D3900B877B5 /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5631DA081F029D3900B877B5 /* LabelViewController.swift */; };
 		5632BFEE1EDD9B5600605018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632BFED1EDD9B5600605018 /* AppDelegate.swift */; };
 		5632BFF31EDD9B5600605018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5632BFF11EDD9B5600605018 /* Main.storyboard */; };
 		5632BFF51EDD9B5600605018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5632BFF41EDD9B5600605018 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		387B0E3BA793B72979916A6A /* Pods-AnimationSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationSwift/Pods-AnimationSwift.release.xcconfig"; sourceTree = "<group>"; };
+		5631DA081F029D3900B877B5 /* LabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
 		5632BFEA1EDD9B5600605018 /* AnimationSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5632BFED1EDD9B5600605018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5632BFF21EDD9B5600605018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5631DA071F029D1800B877B5 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				5631DA081F029D3900B877B5 /* LabelViewController.swift */,
+			);
+			name = Label;
+			sourceTree = "<group>";
+		};
 		5632BFE11EDD9B5600605018 = {
 			isa = PBXGroup;
 			children = (
@@ -95,9 +105,10 @@
 		5632BFEC1EDD9B5600605018 /* AnimationSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5631DA071F029D1800B877B5 /* Label */,
 				568175651F025AB10020D3E5 /* Button */,
 				563B918F1F009F0500986AC0 /* NavigationBar */,
-				565180151EFFEBD100045766 /* Gradient2 */,
+				565180151EFFEBD100045766 /* Pastel */,
 				5635ED8A1EFE9D4E0074F8C4 /* Theme */,
 				569F87711EFD1891006C8EF2 /* Gradient */,
 				5632BFED1EDD9B5600605018 /* AppDelegate.swift */,
@@ -131,12 +142,12 @@
 			name = NavigationBar;
 			sourceTree = "<group>";
 		};
-		565180151EFFEBD100045766 /* Gradient2 */ = {
+		565180151EFFEBD100045766 /* Pastel */ = {
 			isa = PBXGroup;
 			children = (
 				565180161EFFEC2900045766 /* PastelViewController.swift */,
 			);
-			name = Gradient2;
+			name = Pastel;
 			sourceTree = "<group>";
 		};
 		568175651F025AB10020D3E5 /* Button */ = {
@@ -305,6 +316,7 @@
 				5632BFEE1EDD9B5600605018 /* AppDelegate.swift in Sources */,
 				563B91911F009F7500986AC0 /* AlphaTableViewController.swift in Sources */,
 				565097691EFF709D00D7ED61 /* ThemeCell.swift in Sources */,
+				5631DA091F029D3900B877B5 /* LabelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
