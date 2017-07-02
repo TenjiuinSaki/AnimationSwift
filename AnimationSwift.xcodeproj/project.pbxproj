@@ -213,6 +213,7 @@
 				TargetAttributes = {
 					5632BFE91EDD9B5600605018 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = CQZ98A99M5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -440,6 +441,7 @@
 			baseConfigurationReference = F4C0F500181FD1F1DBC96822 /* Pods-AnimationSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQZ98A99M5;
 				INFOPLIST_FILE = AnimationSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yisun.AnimationSwift;
@@ -453,6 +455,7 @@
 			baseConfigurationReference = 387B0E3BA793B72979916A6A /* Pods-AnimationSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CQZ98A99M5;
 				INFOPLIST_FILE = AnimationSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yisun.AnimationSwift;

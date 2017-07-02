@@ -9,6 +9,7 @@
 import UIKit
 import SwiftIconFont
 import DOFavoriteButton
+import PYSearch
 
 class ButtonsViewController: UICollectionViewController {
 
@@ -24,13 +25,29 @@ class ButtonsViewController: UICollectionViewController {
         let imageSize: CGFloat = 30
         let rect = CGRect(x: 15, y: 25, width: 50, height: 50)
         for (key, _) in fontAwesomeIconArr {
+            // 创建图片
             let image = UIImage.icon(from: .FontAwesome, code: key, imageSize: CGSize(width: imageSize, height: imageSize), ofSize: imageSize)
+
+            // 创建动画按钮
             let button = DOFavoriteButton(frame: rect, image: image)
             button.addTarget(self, action: #selector(tapped(sender:)), for: .touchUpInside)
             buttons.append((key, button))
         }
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchAction))
+    }
+    
+    func searchAction() {
         
+        let hotSearches = ["Menu", "Animation", "Transition", "TableView", "CollectionView", "Indicator", "Alert", "UIView", "UITextfield", "UITableView", "Swift", "iOS", "Android"]
+        let searchViewController = PYSearchViewController(hotSearches: hotSearches, searchBarPlaceholder: "搜索你想要的任何东西") { (searchViewController, searchBar, searchText) in
+            print(searchText ?? "111")
+        }
+        searchViewController?.searchHistoryStyle = .default
+        searchViewController?.hotSearchStyle = .colorfulTag
+        searchViewController?.delegate = self
+        searchViewController?.cancelButton = nil
+        navigationController?.pushViewController(searchViewController!, animated: true)
     }
     func tapped(sender: DOFavoriteButton) {
         if sender.isSelected {
@@ -57,4 +74,16 @@ class ButtonsViewController: UICollectionViewController {
         return cell
     }
 
+}
+
+extension ButtonsViewController: PYSearchViewControllerDelegate {
+    func searchViewController(_ searchViewController: PYSearchViewController!, didSelectHotSearchAt index: Int, searchText: String!) {
+        print(searchText)
+    }
+    
+    func searchViewController(_ searchViewController: PYSearchViewController!, searchTextDidChange searchBar: UISearchBar!, searchText: String!) {
+        if searchText.characters.count > 0 {
+            searchViewController.searchSuggestions = ["Menu", "Animation", "Transition", "TableView"]
+        }
+    }
 }

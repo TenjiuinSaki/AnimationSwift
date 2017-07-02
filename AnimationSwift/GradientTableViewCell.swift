@@ -14,8 +14,7 @@ import SwiftyTimer
 class GradientTableViewCell: UITableViewCell, ItemConfigurable {
     
     lazy var titleLabel: UILabel = { [unowned self] in
-        let label = LTMorphingLabel()
-        label.morphingEffect = .fall
+        let label = UILabel()
         label.frame = CGRect(x: 10, y: 10, width: Screen.width - 20, height: 20)
         label.textColor = Color.cellForeground
         label.font = Font.cell
