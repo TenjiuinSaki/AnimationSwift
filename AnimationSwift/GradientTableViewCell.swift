@@ -8,8 +8,6 @@
 
 import UIKit
 import Spots
-import LTMorphingLabel
-import SwiftyTimer
 
 class GradientTableViewCell: UITableViewCell, ItemConfigurable {
     

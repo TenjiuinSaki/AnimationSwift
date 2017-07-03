@@ -14,6 +14,7 @@ class ButtonViewCell: UICollectionViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var iconLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

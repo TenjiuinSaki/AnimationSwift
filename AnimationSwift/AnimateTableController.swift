@@ -39,14 +39,14 @@ class AnimateTableController: UITableViewController {
             present(gradientViewController(), animated: true, completion: nil)
         case 1:
             // pastel不设置为根视图动画会停止（目测是个bug）
-            Storyboard.setRootViewController(Storyboard.pastel())
+            Storyboard.setRootViewController(Storyboard.instance("pastel"))
         case 2:
             present(themeViewController(), animated: true, completion: nil)
         case 3:
             navigationController?.pushViewController(AlphaTableViewController(), animated: true)
         case 5:
             navigationController?.pushViewController(LabelViewController(), animated: true)
-            
+  
         default: ()
         }
 

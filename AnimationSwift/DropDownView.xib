@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DropListView" customModule="AnimationSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="277"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="On3-PP-MCo">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="277"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="Bw7-3k-YRR"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="zKx-Dq-qZl"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="On3-PP-MCo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UNz-jF-UdS"/>
+                <constraint firstItem="On3-PP-MCo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YaX-pM-SEs"/>
+                <constraint firstAttribute="trailing" secondItem="On3-PP-MCo" secondAttribute="trailing" id="ZyP-wn-zVb"/>
+                <constraint firstAttribute="bottom" secondItem="On3-PP-MCo" secondAttribute="bottom" id="ghd-cy-RpZ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tableView" destination="On3-PP-MCo" id="pz0-pK-ze2"/>
+            </connections>
+            <point key="canvasLocation" x="52.5" y="-112.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="JTc-ZV-zbN" customClass="DropCustomView" customModule="AnimationSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="357"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QqR-gf-gGE">
+                    <rect key="frame" x="16" y="20" width="121" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                </segmentedControl>
+                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eCJ-XU-VFt">
+                    <rect key="frame" x="14" y="82" width="347" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </slider>
+                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Yj2-1f-CVm">
+                    <rect key="frame" x="16" y="155" width="94" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </stepper>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JY-7A-1wm">
+                    <rect key="frame" x="0.0" y="313" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="bC6-3y-Qck"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <state key="normal" title="确定"/>
+                    <connections>
+                        <action selector="certain:" destination="JTc-ZV-zbN" eventType="touchUpInside" id="fq3-1p-x4F"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="6JY-7A-1wm" firstAttribute="leading" secondItem="JTc-ZV-zbN" secondAttribute="leading" id="JVf-Sa-NfE"/>
+                <constraint firstAttribute="bottom" secondItem="6JY-7A-1wm" secondAttribute="bottom" id="LFC-rw-L2h"/>
+                <constraint firstAttribute="trailing" secondItem="6JY-7A-1wm" secondAttribute="trailing" id="cWI-WS-1ZD"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="52.5" y="293.5"/>
+        </view>
+    </objects>
+</document>

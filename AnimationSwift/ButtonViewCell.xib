@@ -18,20 +18,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="110"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pF4-dB-rNy">
-                        <rect key="frame" x="0.0" y="95.5" width="100" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pF4-dB-rNy">
+                        <rect key="frame" x="0.0" y="75" width="100" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="rUf-kM-VOW"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWZ-tL-p7d">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <color key="textColor" red="1" green="0.25098039220000001" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="pF4-dB-rNy" firstAttribute="top" secondItem="JWZ-tL-p7d" secondAttribute="bottom" id="8Fq-hZ-Hva"/>
+                <constraint firstItem="JWZ-tL-p7d" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Sk8-Wk-CFM"/>
                 <constraint firstAttribute="bottom" secondItem="pF4-dB-rNy" secondAttribute="bottom" id="Ttx-6J-TnT"/>
+                <constraint firstAttribute="trailing" secondItem="JWZ-tL-p7d" secondAttribute="trailing" id="Xqp-WM-SY5"/>
+                <constraint firstItem="JWZ-tL-p7d" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jba-hu-8cC"/>
                 <constraint firstItem="pF4-dB-rNy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oss-Cu-Lfr"/>
                 <constraint firstAttribute="trailing" secondItem="pF4-dB-rNy" secondAttribute="trailing" id="pcm-4r-LRw"/>
             </constraints>
             <connections>
+                <outlet property="iconLabel" destination="JWZ-tL-p7d" id="Pet-kn-iBa"/>
                 <outlet property="nameLabel" destination="pF4-dB-rNy" id="IxE-re-9xN"/>
             </connections>
         </collectionViewCell>
