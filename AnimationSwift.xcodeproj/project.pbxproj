@@ -28,6 +28,11 @@
 		5681756B1F0262680020D3E5 /* ButtonViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 568175691F0262680020D3E5 /* ButtonViewCell.xib */; };
 		568EF0731F0B7D8D00836DCF /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568EF0721F0B7D8D00836DCF /* PageViewController.swift */; };
 		568EF0751F0B816300836DCF /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568EF0741F0B816300836DCF /* ChildViewController.swift */; };
+		568EF0781F0B992D00836DCF /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568EF0771F0B992D00836DCF /* TabViewController.swift */; };
+		568EF07E1F0B9EBF00836DCF /* GothamProBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 568EF07A1F0B9EBF00836DCF /* GothamProBlack.ttf */; };
+		568EF07F1F0B9EBF00836DCF /* GothamProBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 568EF07B1F0B9EBF00836DCF /* GothamProBold.ttf */; };
+		568EF0801F0B9EBF00836DCF /* GothamProMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 568EF07C1F0B9EBF00836DCF /* GothamProMedium.ttf */; };
+		568EF0811F0B9EBF00836DCF /* GothamProRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 568EF07D1F0B9EBF00836DCF /* GothamProRegular.ttf */; };
 		569F87731EFD18AA006C8EF2 /* GradientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87721EFD18AA006C8EF2 /* GradientTableViewCell.swift */; };
 		569F87751EFD193B006C8EF2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87741EFD193B006C8EF2 /* Config.swift */; };
 		569F87771EFD1AF6006C8EF2 /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87761EFD1AF6006C8EF2 /* GradientViewController.swift */; };
@@ -59,6 +64,11 @@
 		568175691F0262680020D3E5 /* ButtonViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonViewCell.xib; sourceTree = "<group>"; };
 		568EF0721F0B7D8D00836DCF /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		568EF0741F0B816300836DCF /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		568EF0771F0B992D00836DCF /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		568EF07A1F0B9EBF00836DCF /* GothamProBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamProBlack.ttf; sourceTree = "<group>"; };
+		568EF07B1F0B9EBF00836DCF /* GothamProBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamProBold.ttf; sourceTree = "<group>"; };
+		568EF07C1F0B9EBF00836DCF /* GothamProMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamProMedium.ttf; sourceTree = "<group>"; };
+		568EF07D1F0B9EBF00836DCF /* GothamProRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamProRegular.ttf; sourceTree = "<group>"; };
 		569F87721EFD18AA006C8EF2 /* GradientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientTableViewCell.swift; sourceTree = "<group>"; };
 		569F87741EFD193B006C8EF2 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		569F87761EFD1AF6006C8EF2 /* GradientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +125,8 @@
 		5632BFEC1EDD9B5600605018 /* AnimationSwift */ = {
 			isa = PBXGroup;
 			children = (
+				568EF0791F0B9EAA00836DCF /* Font */,
+				568EF0761F0B991900836DCF /* Tab */,
 				5638DD2E1F0A793E00D9E139 /* Page */,
 				5631DA071F029D1800B877B5 /* Label */,
 				568175651F025AB10020D3E5 /* Button */,
@@ -129,8 +141,6 @@
 				5632BFF61EDD9B5600605018 /* LaunchScreen.storyboard */,
 				5632BFF91EDD9B5600605018 /* Info.plist */,
 				569F87741EFD193B006C8EF2 /* Config.swift */,
-				5635ED861EFE9CBF0074F8C4 /* Starjedi.ttf */,
-				5635ED871EFE9CBF0074F8C4 /* Unicorn.ttf */,
 			);
 			path = AnimationSwift;
 			sourceTree = "<group>";
@@ -181,6 +191,27 @@
 				5645EAA61F09CC2500F7AA4E /* DropDownView.xib */,
 			);
 			name = Button;
+			sourceTree = "<group>";
+		};
+		568EF0761F0B991900836DCF /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				568EF0771F0B992D00836DCF /* TabViewController.swift */,
+			);
+			name = Tab;
+			sourceTree = "<group>";
+		};
+		568EF0791F0B9EAA00836DCF /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				5635ED861EFE9CBF0074F8C4 /* Starjedi.ttf */,
+				5635ED871EFE9CBF0074F8C4 /* Unicorn.ttf */,
+				568EF07A1F0B9EBF00836DCF /* GothamProBlack.ttf */,
+				568EF07B1F0B9EBF00836DCF /* GothamProBold.ttf */,
+				568EF07C1F0B9EBF00836DCF /* GothamProMedium.ttf */,
+				568EF07D1F0B9EBF00836DCF /* GothamProRegular.ttf */,
+			);
+			name = Font;
 			sourceTree = "<group>";
 		};
 		569F87711EFD1891006C8EF2 /* Gradient */ = {
@@ -265,13 +296,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5632BFF81EDD9B5600605018 /* LaunchScreen.storyboard in Resources */,
+				568EF07F1F0B9EBF00836DCF /* GothamProBold.ttf in Resources */,
+				568EF0801F0B9EBF00836DCF /* GothamProMedium.ttf in Resources */,
 				5645EAA71F09CC2500F7AA4E /* DropDownView.xib in Resources */,
 				5681756B1F0262680020D3E5 /* ButtonViewCell.xib in Resources */,
 				5650976B1EFF71E400D7ED61 /* ThemeCell.xib in Resources */,
 				5635ED891EFE9CBF0074F8C4 /* Unicorn.ttf in Resources */,
 				5632BFF51EDD9B5600605018 /* Assets.xcassets in Resources */,
+				568EF07E1F0B9EBF00836DCF /* GothamProBlack.ttf in Resources */,
 				5635ED881EFE9CBF0074F8C4 /* Starjedi.ttf in Resources */,
 				5632BFF31EDD9B5600605018 /* Main.storyboard in Resources */,
+				568EF0811F0B9EBF00836DCF /* GothamProRegular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +377,7 @@
 				5681756A1F0262680020D3E5 /* ButtonViewCell.swift in Sources */,
 				5632BFEE1EDD9B5600605018 /* AppDelegate.swift in Sources */,
 				563B91911F009F7500986AC0 /* AlphaTableViewController.swift in Sources */,
+				568EF0781F0B992D00836DCF /* TabViewController.swift in Sources */,
 				565097691EFF709D00D7ED61 /* ThemeCell.swift in Sources */,
 				5645EAA91F0A4A1E00F7AA4E /* ButtonViewController.swift in Sources */,
 				5631DA091F029D3900B877B5 /* LabelViewController.swift in Sources */,

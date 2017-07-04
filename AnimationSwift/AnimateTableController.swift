@@ -48,22 +48,14 @@ class AnimateTableController: UITableViewController {
             navigationController?.pushViewController(LabelViewController(), animated: true)
         case 6:
             navigationController?.pushViewController(PageViewController(), animated: true)
+//        case 7:
+//            present(tabViewController(), animated: true, completion: nil)
         default: ()
         }
 
         
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let row = (sender as! NSIndexPath).row
-//        switch row {
-//        case 1:
-//            
-//        default:
-//            ()
-//        }
-//        
-//    }
     
     func gradientViewController() -> UIViewController {
         let rootViewController = GradientViewController(title: "Gradient")

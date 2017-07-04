@@ -17,7 +17,6 @@ class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         view.addSubview(tableView)
         tableView.delegate = self
@@ -25,6 +24,10 @@ class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.rowHeight = 80
         tableView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0)
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalTo(view)
+        }
+        tableView.backgroundColor = UIColor.clear
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,6 +37,7 @@ class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = "\(index) - \(indexPath.row)"
+        cell.backgroundColor = UIColor.clear
         return cell
     }
 

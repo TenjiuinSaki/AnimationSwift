@@ -180,6 +180,7 @@ class ButtonsViewController: UIViewController, UICollectionViewDelegate, UIColle
         let dropView = YNDropDownMenu(frame: dropFrame, dropDownViews: views, dropDownViewTitles: ["分类", "other"])
         dropView.setLabelColorWhen(normal: #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), selected: #colorLiteral(red: 1, green: 0.6431372549, blue: 0.03529411765, alpha: 1), disabled: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
         dropView.setLabelFontWhen(normal: .systemFont(ofSize: 13), selected: .boldSystemFont(ofSize: 13), disabled: .systemFont(ofSize: 13))
+        dropView.setImageWhen(normal: #imageLiteral(resourceName: "arrow_nor"), selected: #imageLiteral(resourceName: "arrow_sel"), disabled: #imageLiteral(resourceName: "arrow_dim"))
         dropView.backgroundBlurEnabled = true
         dropView.bottomLine.isHidden = false
         

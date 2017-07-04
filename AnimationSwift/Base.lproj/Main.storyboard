@@ -142,6 +142,26 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="k0v-1v-Tha" style="IBUITableViewCellStyleDefault" id="V4G-k6-Hqq">
+                                        <rect key="frame" x="0.0" y="308" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V4G-k6-Hqq" id="ugV-NL-55d">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Tab切换" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k0v-1v-Tha">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="qAM-YW-DZ6" kind="presentation" id="JmD-gI-Aci"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -240,6 +260,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chb-0s-uil" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1937" y="-10"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hCg-UR-Ejf">
+            <objects>
+                <navigationController id="qAM-YW-DZ6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="U4V-PV-5GU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wVI-SB-MJm" kind="relationship" relationship="rootViewController" id="Dez-6M-dEo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Z1-aG-j2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="703"/>
+        </scene>
+        <!--HAUNT-->
+        <scene sceneID="Czz-T7-DEt">
+            <objects>
+                <viewController title="HAUNT" id="wVI-SB-MJm" customClass="TabViewController" customModule="AnimationSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vh5-8G-ma9"/>
+                        <viewControllerLayoutGuide type="bottom" id="1tZ-Fo-TOv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cUG-8A-lYY">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OSo-Rm-kSD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ate-ls-IT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1937" y="703"/>
         </scene>
         <!--Pastel View Controller-->
         <scene sceneID="8qU-7Y-cJr">
@@ -361,7 +416,7 @@
         <scene sceneID="0dT-4B-Jvh">
             <objects>
                 <navigationController id="wM4-XS-4Qj" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yoM-bX-W7K">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yoM-bX-W7K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

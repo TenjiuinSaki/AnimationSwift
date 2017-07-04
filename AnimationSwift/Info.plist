@@ -4,6 +4,10 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>GothamProRegular.ttf</string>
+		<string>GothamProMedium.ttf</string>
+		<string>GothamProBold.ttf</string>
+		<string>GothamProBlack.ttf</string>
 		<string>Unicorn.ttf</string>
 		<string>Starjedi.ttf</string>
 	</array>
