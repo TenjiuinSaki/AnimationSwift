@@ -10,6 +10,8 @@ import UIKit
 import SwiftIconFont
 import PYSearch
 import YNDropDownMenu
+import Spruce
+import SwiftyTimer
 
 class ButtonsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -103,9 +105,39 @@ class ButtonsViewController: UIViewController, UICollectionViewDelegate, UIColle
             }
             // 刷新数据，返回顶端
             collectionView.reloadData()
-            collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+            collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: false)   // 关闭滚动动画，防止与加载动画冲突
+            prepareAnimation()          // 每次刷新启用加载动画
         }
     }
+    
+    /// 配置加载动画
+    let animations: [StockAnimation] = [.slide(.up, .moderately), .fadeIn, .expand(.slightly)]
+    let sortFunction = CorneredSortFunction(corner: .topLeft, interObjectDelay: 0.05)
+//    let sortFunction = RadialSortFunction(position: .middle, interObjectDelay: 0.025)
+//    let sortFunction = RandomSortFunction(interObjectDelay: 0.025)
+    
+    var isFirstEnter = true
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // 第一次进入后，设置数据源
+        if isFirstEnter {
+            buttonType = .FontAwesome
+            isFirstEnter = false
+        }
+        
+    }
+    
+    func prepareAnimation() {
+        collectionView.spruce.prepare(with: animations)
+        
+        let animation = SpringAnimation(duration: 0.7)
+        DispatchQueue.main.async {
+            self.collectionView.spruce.animate(self.animations, animationType: animation, sortFunction: self.sortFunction)
+        }
+    }
+    
     // 通知方法，类型发生改变
     func notice(noti: Notification) {
         let type = noti.object as! Fonts
@@ -113,7 +145,6 @@ class ButtonsViewController: UIViewController, UICollectionViewDelegate, UIColle
             buttonType = type
         }
     }
-    
     
     deinit {
         // 移除通知监听
@@ -126,7 +157,7 @@ class ButtonsViewController: UIViewController, UICollectionViewDelegate, UIColle
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         // Do any additional setup after loading the view.
         
-        buttonType = .FontAwesome
+        
         // 设置返回按钮文字，默认为标题
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "取消", style: .plain, target: nil, action: nil)
         

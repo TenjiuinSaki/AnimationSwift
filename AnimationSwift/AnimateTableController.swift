@@ -46,7 +46,8 @@ class AnimateTableController: UITableViewController {
             navigationController?.pushViewController(AlphaTableViewController(), animated: true)
         case 5:
             navigationController?.pushViewController(LabelViewController(), animated: true)
-  
+        case 6:
+            navigationController?.pushViewController(PageViewController(), animated: true)
         default: ()
         }
 

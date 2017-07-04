@@ -37,6 +37,7 @@ class GradientViewController: SpotsController {
         return animation
     }()
     
+    
     convenience init(title: String) {
         Configuration.register(view: GradientTableViewCell.self, identifier: "gradient_cell")                       //注册UITableViewCell
         let model = ComponentModel(kind: .list)     //设置为UITableView模式渲染

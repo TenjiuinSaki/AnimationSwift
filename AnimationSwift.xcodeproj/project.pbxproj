@@ -26,6 +26,8 @@
 		568175671F025AD00020D3E5 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568175661F025AD00020D3E5 /* ButtonsViewController.swift */; };
 		5681756A1F0262680020D3E5 /* ButtonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568175681F0262680020D3E5 /* ButtonViewCell.swift */; };
 		5681756B1F0262680020D3E5 /* ButtonViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 568175691F0262680020D3E5 /* ButtonViewCell.xib */; };
+		568EF0731F0B7D8D00836DCF /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568EF0721F0B7D8D00836DCF /* PageViewController.swift */; };
+		568EF0751F0B816300836DCF /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568EF0741F0B816300836DCF /* ChildViewController.swift */; };
 		569F87731EFD18AA006C8EF2 /* GradientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87721EFD18AA006C8EF2 /* GradientTableViewCell.swift */; };
 		569F87751EFD193B006C8EF2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87741EFD193B006C8EF2 /* Config.swift */; };
 		569F87771EFD1AF6006C8EF2 /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569F87761EFD1AF6006C8EF2 /* GradientViewController.swift */; };
@@ -55,6 +57,8 @@
 		568175661F025AD00020D3E5 /* ButtonsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		568175681F0262680020D3E5 /* ButtonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewCell.swift; sourceTree = "<group>"; };
 		568175691F0262680020D3E5 /* ButtonViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonViewCell.xib; sourceTree = "<group>"; };
+		568EF0721F0B7D8D00836DCF /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		568EF0741F0B816300836DCF /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		569F87721EFD18AA006C8EF2 /* GradientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientTableViewCell.swift; sourceTree = "<group>"; };
 		569F87741EFD193B006C8EF2 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		569F87761EFD1AF6006C8EF2 /* GradientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 		5632BFEC1EDD9B5600605018 /* AnimationSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5638DD2E1F0A793E00D9E139 /* Page */,
 				5631DA071F029D1800B877B5 /* Label */,
 				568175651F025AB10020D3E5 /* Button */,
 				563B918F1F009F0500986AC0 /* NavigationBar */,
@@ -138,6 +143,15 @@
 				5650976A1EFF71E400D7ED61 /* ThemeCell.xib */,
 			);
 			name = Theme;
+			sourceTree = "<group>";
+		};
+		5638DD2E1F0A793E00D9E139 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				568EF0721F0B7D8D00836DCF /* PageViewController.swift */,
+				568EF0741F0B816300836DCF /* ChildViewController.swift */,
+			);
+			name = Page;
 			sourceTree = "<group>";
 		};
 		563B918F1F009F0500986AC0 /* NavigationBar */ = {
@@ -324,12 +338,14 @@
 				569F87731EFD18AA006C8EF2 /* GradientTableViewCell.swift in Sources */,
 				5635ED851EFE83590074F8C4 /* AnimateTableController.swift in Sources */,
 				565180171EFFEC2900045766 /* PastelViewController.swift in Sources */,
+				568EF0751F0B816300836DCF /* ChildViewController.swift in Sources */,
 				5681756A1F0262680020D3E5 /* ButtonViewCell.swift in Sources */,
 				5632BFEE1EDD9B5600605018 /* AppDelegate.swift in Sources */,
 				563B91911F009F7500986AC0 /* AlphaTableViewController.swift in Sources */,
 				565097691EFF709D00D7ED61 /* ThemeCell.swift in Sources */,
 				5645EAA91F0A4A1E00F7AA4E /* ButtonViewController.swift in Sources */,
 				5631DA091F029D3900B877B5 /* LabelViewController.swift in Sources */,
+				568EF0731F0B7D8D00836DCF /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
