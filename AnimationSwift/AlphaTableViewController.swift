@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ETNavBarTransparent
+import ETNavBarTransparent          //这个库会影响项目整体，.black UIBarStyle将不影响状态栏颜色
 import CRRefresh
 import FSPagerView
 import Spruce

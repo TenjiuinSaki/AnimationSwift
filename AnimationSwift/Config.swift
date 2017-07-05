@@ -98,6 +98,7 @@ struct Storyboard {
     
     static func setRootViewController(_ viewController: UIViewController) {
         UIApplication.shared.keyWindow?.rootViewController = viewController
+        
     }
     
     static func instance(_ identifier: String) -> UIViewController {
@@ -108,6 +109,7 @@ struct Storyboard {
     static func initial() -> UIViewController {
         return main.instantiateInitialViewController()!
     }
+    
 }
 
 struct Xib {
@@ -141,16 +143,34 @@ func info<T>(message: T, fullName: String = #file, lineNum: Int = #line) {
 }
 
 
-/// 系统缓存
-let systemCache = HybridCache(name: "SystemCache", config: Config(
-    expiry: .date(Date().addingTimeInterval(60)),   //过期时间1分钟
-    memoryCountLimit: 0,
-    memoryTotalCostLimit: 0,
-    maxDiskSize: 10000,                             //缓存大小10M
-    cacheDirectory: NSSearchPathForDirectoriesInDomains(
-        .documentDirectory,
-        FileManager.SearchPathDomainMask.userDomainMask,
-        true).first! + "/cache-in-documents"))
+struct TSCache {
+    /// 缓存
+    static let cache = HybridCache(name: "SystemCache", config: Config(
+        expiry: .date(Date().addingTimeInterval(60 * 5)),   //过期时间5分钟
+        memoryCountLimit: 0,
+        memoryTotalCostLimit: 0,
+        maxDiskSize: 10000,                             //缓存大小10M
+        cacheDirectory: DirPath.document + "/cache-in-documents"))
+    
+    static func setDic(_ dic: [String: Any], key: String) {
+        try? cache.addObject(JSON.dictionary(dic), forKey: key)
+    }
+    
+    static func getDic(key: String) -> [String: Any]? {
+        let json: JSON? = cache.object(forKey: key)
+        return json?.object as? [String: Any]
+    }
+    
+    static func setArray(_ arr: [Any], key: String) {
+        try? cache.addObject(JSON.array(arr), forKey: key)
+    }
+    
+    static func getArray(key: String) -> [Any]? {
+        let json: JSON? = cache.object(forKey: key)
+        return json?.object as? [Any]
+    }
+}
+
 
 struct DirPath {
     /// (home)/Documents
@@ -161,7 +181,7 @@ struct DirPath {
     static var caches: String {
         return NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first!
     }
-    /// 沙盒路径
+    /// home
     static var home: String {
         return NSHomeDirectory()
     }

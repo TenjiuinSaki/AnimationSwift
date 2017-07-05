@@ -16,6 +16,7 @@
 		5635ED881EFE9CBF0074F8C4 /* Starjedi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5635ED861EFE9CBF0074F8C4 /* Starjedi.ttf */; };
 		5635ED891EFE9CBF0074F8C4 /* Unicorn.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5635ED871EFE9CBF0074F8C4 /* Unicorn.ttf */; };
 		5635ED8C1EFE9E320074F8C4 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635ED8B1EFE9E320074F8C4 /* ThemeViewController.swift */; };
+		5636ACCC1F0BDB2C00394F11 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5636ACCB1F0BDB2C00394F11 /* SideViewController.swift */; };
 		563B91911F009F7500986AC0 /* AlphaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B91901F009F7500986AC0 /* AlphaTableViewController.swift */; };
 		5645EAA51F09CC1500F7AA4E /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5645EAA41F09CC1500F7AA4E /* DropDownView.swift */; };
 		5645EAA71F09CC2500F7AA4E /* DropDownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5645EAA61F09CC2500F7AA4E /* DropDownView.xib */; };
@@ -52,6 +53,7 @@
 		5635ED861EFE9CBF0074F8C4 /* Starjedi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjedi.ttf; sourceTree = "<group>"; };
 		5635ED871EFE9CBF0074F8C4 /* Unicorn.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unicorn.ttf; sourceTree = "<group>"; };
 		5635ED8B1EFE9E320074F8C4 /* ThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
+		5636ACCB1F0BDB2C00394F11 /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
 		563B91901F009F7500986AC0 /* AlphaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaTableViewController.swift; sourceTree = "<group>"; };
 		5645EAA41F09CC1500F7AA4E /* DropDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		5645EAA61F09CC2500F7AA4E /* DropDownView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownView.xib; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		5632BFEC1EDD9B5600605018 /* AnimationSwift */ = {
 			isa = PBXGroup;
 			children = (
+				5636ACCA1F0BDAF900394F11 /* Side */,
 				568EF0791F0B9EAA00836DCF /* Font */,
 				568EF0761F0B991900836DCF /* Tab */,
 				5638DD2E1F0A793E00D9E139 /* Page */,
@@ -153,6 +156,14 @@
 				5650976A1EFF71E400D7ED61 /* ThemeCell.xib */,
 			);
 			name = Theme;
+			sourceTree = "<group>";
+		};
+		5636ACCA1F0BDAF900394F11 /* Side */ = {
+			isa = PBXGroup;
+			children = (
+				5636ACCB1F0BDB2C00394F11 /* SideViewController.swift */,
+			);
+			name = Side;
 			sourceTree = "<group>";
 		};
 		5638DD2E1F0A793E00D9E139 /* Page */ = {
@@ -376,6 +387,7 @@
 				568EF0751F0B816300836DCF /* ChildViewController.swift in Sources */,
 				5681756A1F0262680020D3E5 /* ButtonViewCell.swift in Sources */,
 				5632BFEE1EDD9B5600605018 /* AppDelegate.swift in Sources */,
+				5636ACCC1F0BDB2C00394F11 /* SideViewController.swift in Sources */,
 				563B91911F009F7500986AC0 /* AlphaTableViewController.swift in Sources */,
 				568EF0781F0B992D00836DCF /* TabViewController.swift in Sources */,
 				565097691EFF709D00D7ED61 /* ThemeCell.swift in Sources */,

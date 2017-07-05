@@ -23,6 +23,12 @@ PODS:
   - CRRefresh (1.0.5)
   - DGRunkeeperSwitch (1.1.4)
   - DOFavoriteButton (0.0.4)
+  - DrawerController (3.2.1):
+    - DrawerController/Core (= 3.2.1)
+    - DrawerController/DrawerVisualStates (= 3.2.1)
+  - DrawerController/Core (3.2.1)
+  - DrawerController/DrawerVisualStates (3.2.1):
+    - DrawerController/Core
   - ETNavBarTransparent (1.0.9)
   - Fakery (2.0.0)
   - FSPagerView (0.5.4)
@@ -45,6 +51,7 @@ PODS:
   - SwiftIconFont (2.6.0)
   - SwiftMessages (3.4.0)
   - SwiftyTimer (2.0.0)
+  - SwipeBack (1.1.1)
   - Tailor (2.2.1)
   - Themes (1.1.0)
   - YNDropDownMenu (2.3.2)
@@ -56,6 +63,7 @@ DEPENDENCIES:
   - CRRefresh
   - DGRunkeeperSwitch
   - DOFavoriteButton (from `https://github.com/okmr-d/DOFavoriteButton.git`)
+  - DrawerController
   - ETNavBarTransparent
   - Fakery
   - FSPagerView
@@ -73,6 +81,7 @@ DEPENDENCIES:
   - SwiftIconFont
   - SwiftMessages
   - SwiftyTimer
+  - SwipeBack
   - Themes
   - YNDropDownMenu
 
@@ -93,6 +102,7 @@ SPEC CHECKSUMS:
   CRRefresh: 718be57647db922a4a3af3f17fc41289145d8e83
   DGRunkeeperSwitch: cc237936f42237307f5e212e18136a27bf907bf1
   DOFavoriteButton: 866e15af173d2dd5233971a1f657a5f31d2491d5
+  DrawerController: d2f25c567a1786476d74bfe8cde9a5bdd39972a9
   ETNavBarTransparent: 19b8e8e7bd8ee693e0c1a9d9bdddc6032ae65e75
   Fakery: 97b99c23937d2e025d9135c75e2b17351ccd5031
   FSPagerView: e523cd48dd16c55e66408acc43e03ac581b723df
@@ -111,10 +121,11 @@ SPEC CHECKSUMS:
   SwiftIconFont: bbe1f32e1e16bac87dad8566afc80132cb8d072c
   SwiftMessages: e20aa1557fde1525ea369361bec4943cc0d08e7c
   SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
+  SwipeBack: d6759601b40da1f4161033feb30ab475d7d04322
   Tailor: caabfebed676fab6e00c0c173e05294ccf89861e
   Themes: 9c5626e1b9d0a5683e5179c00c38077bd0281148
   YNDropDownMenu: 9d9f1ae71a408d0e7c66a55da2a52232545fca5a
 
-PODFILE CHECKSUM: 04016559c76562049e1d05f5b5518d0fc56441c9
+PODFILE CHECKSUM: 76897048eaf6ab984a455dffa35df045cafcaf69
 
 COCOAPODS: 1.2.1

@@ -103,10 +103,12 @@ class ButtonsViewController: UIViewController, UICollectionViewDelegate, UIColle
             case .MapIcon:
                 iconFontNames = miNames
             }
-            // 刷新数据，返回顶端
-            collectionView.reloadData()
-            collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: false)   // 关闭滚动动画，防止与加载动画冲突
+            
+            
+            self.collectionView.reloadData() // 刷新数据，返回顶端
             prepareAnimation()          // 每次刷新启用加载动画
+            self.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: false)   // 关闭滚动动画，防止与加载动画冲突
+            
         }
     }
     
@@ -123,14 +125,14 @@ class ButtonsViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         // 第一次进入后，设置数据源
         if isFirstEnter {
-            buttonType = .FontAwesome
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
+                self.buttonType = .FontAwesome
+            }
             isFirstEnter = false
         }
-        
     }
     
     func prepareAnimation() {
-        collectionView.spruce.prepare(with: animations)
         
         let animation = SpringAnimation(duration: 0.7)
         DispatchQueue.main.async {

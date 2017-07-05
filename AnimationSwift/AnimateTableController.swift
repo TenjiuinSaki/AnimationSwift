@@ -8,15 +8,9 @@
 
 import UIKit
 import Hero
+import DrawerController
 
 class AnimateTableController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        guard let navigationController = navigationController else { return }
-        navigationController.isHeroEnabled = true
-        isHeroEnabled = true    //激活Hero
-    }
     
     var animations: [HeroDefaultAnimationType] = [
         .push(direction: .right),
@@ -32,6 +26,46 @@ class AnimateTableController: UITableViewController {
         .zoomOut,
         .none
     ]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        guard let navigationController = navigationController else { return }
+        navigationController.isHeroEnabled = true
+        isHeroEnabled = true    //激活Hero
+        
+        setDrawer()
+    }
+    @IBAction func openDrawer(_ sender: Any) {
+        evo_drawerController?.toggleLeftDrawerSide(animated: true, completion: nil)
+    }
+    /// 添加覆盖层
+    lazy var coverView: UIView = { [unowned self] in
+        let coverView = UIView(frame: Screen.bounds)
+        self.navigationController?.view.addSubview(coverView)
+        coverView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).alpha(0.2)
+        coverView.alpha = 0
+        return coverView
+    }()
+    
+    /// 添加抽屉菜单
+    func setDrawer() {
+        if let drawerController = evo_drawerController {
+            drawerController.showsShadows = false               //不显示阴影
+            drawerController.maximumLeftDrawerWidth = 300       //菜单宽度
+            drawerController.openDrawerGestureModeMask = .panningNavigationBar  //滑动导航栏打开菜单
+            drawerController.closeDrawerGestureModeMask = .all      //任何滑动关闭菜单
+            drawerController.minimumAnimationDuration = 0.3         //开关动画时长
+            drawerController.shouldStretchDrawer = false            //禁止菜单拉伸
+            drawerController.view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            
+            drawerController.drawerVisualStateBlock = { [unowned self] (drawerController, drawerSide, percentVisible) in
+                self.coverView.alpha = percentVisible              //覆盖层渐变
+                let visualStateBlock = DrawerVisualState.parallaxVisualStateBlock(parallaxFactor: 3.0)                          // 1/3处闭合
+                visualStateBlock(drawerController, drawerSide, percentVisible)
+            }
+        }
+    }
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
