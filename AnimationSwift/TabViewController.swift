@@ -49,8 +49,8 @@ class TabViewController: ColorMatchTabsViewController {
 
         // Do any additional setup after loading the view.
 //        title = "HAUNT"
-        popoverViewController = PopoverViewController()
-        popoverViewController?.delegate = self
+//        popoverViewController = PopoverViewController()
+//        popoverViewController?.delegate = self
         
         titleLabel.font = Font.size(20, name: "GothamPro-Black")
         dataSource = self

@@ -13,6 +13,10 @@ class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var index = 0
     let tableView = UITableView(frame: Screen.bounds, style: .plain)
     
+    convenience init(title: String) {
+        self.init()
+        self.title = title
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

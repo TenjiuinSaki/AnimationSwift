@@ -51,7 +51,7 @@ class AnimateTableController: UITableViewController {
     func setDrawer() {
         if let drawerController = evo_drawerController {
             drawerController.showsShadows = false               //不显示阴影
-            drawerController.maximumLeftDrawerWidth = 300       //菜单宽度
+            drawerController.maximumLeftDrawerWidth = Screen.width - 70       //菜单宽度
             drawerController.openDrawerGestureModeMask = .panningNavigationBar  //滑动导航栏打开菜单
             drawerController.closeDrawerGestureModeMask = .all      //任何滑动关闭菜单
             drawerController.minimumAnimationDuration = 0.3         //开关动画时长
@@ -82,8 +82,8 @@ class AnimateTableController: UITableViewController {
             navigationController?.pushViewController(LabelViewController(), animated: true)
         case 6:
             navigationController?.pushViewController(PageViewController(), animated: true)
-//        case 7:
-//            present(tabViewController(), animated: true, completion: nil)
+        case 8:
+            present(pageMentController(), animated: true, completion: nil)
         default: ()
         }
 
@@ -113,6 +113,21 @@ class AnimateTableController: UITableViewController {
     func themeViewController() -> UIViewController {
         let themeViewController = ThemeViewController(title: "Theme")
         let nav = UINavigationController(rootViewController: themeViewController)
+        return nav
+    }
+    
+    func pageMentController() -> UIViewController {
+        let nav = UINavigationController(rootViewController: PageMenuViewController())
+        
+        let navigationBar = nav.navigationBar
+        navigationBar.isTranslucent = false
+        navigationBar.shadowImage = UIImage()
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.barTintColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
+        navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        navigationBar.titleTextAttributes = [
+            NSForegroundColorAttributeName: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+        ]
         return nav
     }
     

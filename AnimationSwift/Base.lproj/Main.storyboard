@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -210,6 +211,23 @@
                                         <connections>
                                             <segue destination="qAM-YW-DZ6" kind="presentation" id="JmD-gI-Aci"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="r8c-tr-amh" style="IBUITableViewCellStyleDefault" id="XbX-co-OUn">
+                                        <rect key="frame" x="0.0" y="352" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XbX-co-OUn" id="Yew-6K-gZ5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="PageMenu分页菜单" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r8c-tr-amh">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -479,20 +497,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="Not-cW-h0J">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starwar" translatesAutoresizingMaskIntoConstraints="NO" id="Not-cW-h0J">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="184" id="0J7-fl-kCF"/>
+                                    <constraint firstAttribute="height" constant="220" id="0J7-fl-kCF"/>
                                 </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jvg-dD-cwc">
+                                <rect key="frame" x="0.0" y="230" width="375" height="367"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="kSs-Jv-dlY" id="bCB-II-rQl"/>
+                                    <outlet property="delegate" destination="kSs-Jv-dlY" id="eUB-9w-NHz"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXu-Bb-7K1">
+                                <rect key="frame" x="16" y="617" width="63" height="30"/>
+                                <state key="normal" title="SETTING"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRy-HN-E8w">
+                                <rect key="frame" x="327" y="617" width="32" height="30"/>
+                                <state key="normal" title="EXIT"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jvg-dD-cwc" firstAttribute="top" secondItem="Not-cW-h0J" secondAttribute="bottom" constant="10" id="Hku-vI-xH8"/>
+                            <constraint firstItem="pXu-Bb-7K1" firstAttribute="leading" secondItem="VUC-cH-Vrz" secondAttribute="leadingMargin" id="Il9-UN-XOd"/>
                             <constraint firstItem="Not-cW-h0J" firstAttribute="leading" secondItem="VUC-cH-Vrz" secondAttribute="leading" id="Mst-wM-1gk"/>
+                            <constraint firstAttribute="trailing" secondItem="jvg-dD-cwc" secondAttribute="trailing" id="Nai-OZ-iLY"/>
+                            <constraint firstItem="OzP-76-RQE" firstAttribute="top" secondItem="pXu-Bb-7K1" secondAttribute="bottom" constant="20" id="Xad-a6-VPY"/>
                             <constraint firstAttribute="trailing" secondItem="Not-cW-h0J" secondAttribute="trailing" id="c9f-NK-J9A"/>
                             <constraint firstItem="Not-cW-h0J" firstAttribute="top" secondItem="VUC-cH-Vrz" secondAttribute="top" id="dK0-mX-RvR"/>
+                            <constraint firstItem="BRy-HN-E8w" firstAttribute="top" secondItem="jvg-dD-cwc" secondAttribute="bottom" constant="20" id="dem-8e-kgx"/>
+                            <constraint firstItem="OzP-76-RQE" firstAttribute="top" secondItem="BRy-HN-E8w" secondAttribute="bottom" constant="20" id="iGL-TH-sgX"/>
+                            <constraint firstItem="jvg-dD-cwc" firstAttribute="leading" secondItem="VUC-cH-Vrz" secondAttribute="leading" id="ocF-it-JmX"/>
+                            <constraint firstItem="BRy-HN-E8w" firstAttribute="trailing" secondItem="VUC-cH-Vrz" secondAttribute="trailingMargin" id="xwh-R4-Rn2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="jvg-dD-cwc" id="oLb-eK-wf0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBm-Ki-tjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -538,6 +584,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="day" width="375" height="211"/>
+        <image name="starwar" width="375" height="211"/>
     </resources>
 </document>

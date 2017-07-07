@@ -24,8 +24,8 @@ install_framework()
   fi
 
   # use filter instead of exclude so missing patterns dont' throw errors
-  echo "rsync -av --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers\" --filter \"- PrivateHeaders\" --filter \"- Modules\" \"${source}\" \"${destination}\""
-  rsync -av --filter "- CVS/" --filter "- .svn/" --filter "- .git/" --filter "- .hg/" --filter "- Headers" --filter "- PrivateHeaders" --filter "- Modules" "${source}" "${destination}"
+  echo "rsync --delete -av --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers\" --filter \"- PrivateHeaders\" --filter \"- Modules\" \"${source}\" \"${destination}\""
+  rsync --delete -av --filter "- CVS/" --filter "- .svn/" --filter "- .git/" --filter "- .hg/" --filter "- Headers" --filter "- PrivateHeaders" --filter "- Modules" "${source}" "${destination}"
 
   local basename
   basename="$(basename -s .framework "$1")"
@@ -54,6 +54,15 @@ install_framework()
   fi
 }
 
+# Copies the dSYM of a vendored framework
+install_dsym() {
+  local source="$1"
+  if [ -r "$source" ]; then
+    echo "rsync --delete -av --filter \"- CVS/\" --filter \"- .svn/\" --filter \"- .git/\" --filter \"- .hg/\" --filter \"- Headers\" --filter \"- PrivateHeaders\" --filter \"- Modules\" \"${source}\" \"${DWARF_DSYM_FOLDER_PATH}\""
+    rsync --delete -av --filter "- CVS/" --filter "- .svn/" --filter "- .git/" --filter "- .hg/" --filter "- Headers" --filter "- PrivateHeaders" --filter "- Modules" "${source}" "${DWARF_DSYM_FOLDER_PATH}"
+  fi
+}
+
 # Signs a framework with the provided identity
 code_sign_if_enabled() {
   if [ -n "${EXPANDED_CODE_SIGN_IDENTITY}" -a "${CODE_SIGNING_REQUIRED}" != "NO" -a "${CODE_SIGNING_ALLOWED}" != "NO" ]; then
@@ -76,7 +85,7 @@ strip_invalid_archs() {
   archs="$(lipo -info "$binary" | rev | cut -d ':' -f1 | rev)"
   stripped=""
   for arch in $archs; do
-    if ! [[ "${VALID_ARCHS}" == *"$arch"* ]]; then
+    if ! [[ "${ARCHS}" == *"$arch"* ]]; then
       # Strip non-valid architectures in-place
       lipo -remove "$arch" -output "$binary" "$binary" || exit 1
       stripped="$stripped $arch"
@@ -89,68 +98,70 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/ActiveLabel/ActiveLabel.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/CHIPageControl/CHIPageControl.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/CRRefresh/CRRefresh.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Cache/Cache.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ColorMatchTabs/ColorMatchTabs.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DGRunkeeperSwitch/DGRunkeeperSwitch.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DOFavoriteButton/DOFavoriteButton.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DrawerController/DrawerController.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ETNavBarTransparent/ETNavBarTransparent.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FSPagerView/FSPagerView.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Fakery/Fakery.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/GlitchLabel/GlitchLabel.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Hero/Hero.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Hue/Hue.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/LTMorphingLabel/LTMorphingLabel.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/PYSearch/PYSearch.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Pageboy/Pageboy.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Pastel/Pastel.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SnapKit/SnapKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Spots/Spots.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Spruce/Spruce.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Sugar/Sugar.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftHash/SwiftHash.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftIconFont/SwiftIconFont.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftMessages/SwiftMessages.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftyTimer/SwiftyTimer.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwipeBack/SwipeBack.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Tailor/Tailor.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Themes/Themes.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/YNDropDownMenu/YNDropDownMenu.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ActiveLabel/ActiveLabel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CRRefresh/CRRefresh.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Cache/Cache.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ColorMatchTabs/ColorMatchTabs.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DGRunkeeperSwitch/DGRunkeeperSwitch.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DOFavoriteButton/DOFavoriteButton.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DrawerController/DrawerController.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ETNavBarTransparent/ETNavBarTransparent.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Fakery/Fakery.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GlitchLabel/GlitchLabel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Hero/Hero.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Hue/Hue.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PYSearch/PYSearch.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PageMenu/PageMenu.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Spots/Spots.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Spruce/Spruce.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Sugar/Sugar.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftHash/SwiftHash.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftIconFont/SwiftIconFont.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftyTimer/SwiftyTimer.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwipeBack/SwipeBack.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Tailor/Tailor.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Themes/Themes.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/YNDropDownMenu/YNDropDownMenu.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/ActiveLabel/ActiveLabel.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/CHIPageControl/CHIPageControl.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/CRRefresh/CRRefresh.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Cache/Cache.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ColorMatchTabs/ColorMatchTabs.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DGRunkeeperSwitch/DGRunkeeperSwitch.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DOFavoriteButton/DOFavoriteButton.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DrawerController/DrawerController.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ETNavBarTransparent/ETNavBarTransparent.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FSPagerView/FSPagerView.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Fakery/Fakery.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/GlitchLabel/GlitchLabel.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Hero/Hero.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Hue/Hue.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/LTMorphingLabel/LTMorphingLabel.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/PYSearch/PYSearch.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Pageboy/Pageboy.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Pastel/Pastel.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SnapKit/SnapKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Spots/Spots.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Spruce/Spruce.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Sugar/Sugar.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftHash/SwiftHash.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftIconFont/SwiftIconFont.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftMessages/SwiftMessages.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftyTimer/SwiftyTimer.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwipeBack/SwipeBack.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Tailor/Tailor.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Themes/Themes.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/YNDropDownMenu/YNDropDownMenu.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ActiveLabel/ActiveLabel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CRRefresh/CRRefresh.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Cache/Cache.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ColorMatchTabs/ColorMatchTabs.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DGRunkeeperSwitch/DGRunkeeperSwitch.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DOFavoriteButton/DOFavoriteButton.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/DrawerController/DrawerController.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ETNavBarTransparent/ETNavBarTransparent.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Fakery/Fakery.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GlitchLabel/GlitchLabel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Hero/Hero.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Hue/Hue.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PYSearch/PYSearch.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PageMenu/PageMenu.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Spots/Spots.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Spruce/Spruce.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Sugar/Sugar.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftHash/SwiftHash.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftIconFont/SwiftIconFont.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftyTimer/SwiftyTimer.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwipeBack/SwipeBack.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Tailor/Tailor.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Themes/Themes.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/YNDropDownMenu/YNDropDownMenu.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
