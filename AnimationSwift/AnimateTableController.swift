@@ -84,6 +84,8 @@ class AnimateTableController: UITableViewController {
             navigationController?.pushViewController(PageViewController(), animated: true)
         case 8:
             present(pageMentController(), animated: true, completion: nil)
+        case 9:
+            navigationController?.pushViewController(BlurViewController(), animated: true)
         default: ()
         }
 

@@ -57,7 +57,7 @@ class PageMenuViewController: UIViewController {
     }
     
     func addCloseButton() {
-        let image = UIImage.icon(from: .Ionicon, code: "ios-close-empty", imageSize: CGSize(width: 36, height: 36), ofSize: 36)
+        let image = UIImage.icon(from: .Ionicon, iconColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), code: "ios-close-empty", imageSize: CGSize(width: 36, height: 36), ofSize: 36)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(hero_dismissViewController))
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {

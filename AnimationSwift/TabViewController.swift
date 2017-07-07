@@ -1,4 +1,4 @@
-//
+    //
 //  TabViewController.swift
 //  AnimationSwift
 //
@@ -62,7 +62,7 @@ class TabViewController: ColorMatchTabsViewController {
     }
     
     func setNavigationItems() {
-        let closeImage = UIImage.icon(from: .Ionicon, code: "ios-close-empty", imageSize: CGSize(width: 36, height: 36), ofSize: 36)
+        let closeImage = UIImage.icon(from: .Ionicon, iconColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), code: "ios-close-empty", imageSize: CGSize(width: 36, height: 36), ofSize: 36)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: closeImage, style: .plain, target: self, action: #selector(hero_dismissViewController))
         
     }

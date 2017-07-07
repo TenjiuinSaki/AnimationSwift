@@ -68,7 +68,7 @@ class GradientViewController: SpotsController {
         gradient.timeOffset = 0  //设置为动画起始状态
         gradient.add(animation, forKey: "change_colors")
         
-        let image = UIImage.icon(from: .Ionicon, code: "ios-close-empty", imageSize: CGSize(width: 36, height: 36), ofSize: 36)
+        let image = UIImage.icon(from: .Ionicon, iconColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), code: "ios-close-empty", imageSize: CGSize(width: 36, height: 36), ofSize: 36)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(hero_dismissViewController))
         
         scrollView.contentInset.bottom = 20     //设置底边距

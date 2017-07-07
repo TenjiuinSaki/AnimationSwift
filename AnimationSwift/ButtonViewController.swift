@@ -48,7 +48,7 @@ class ButtonViewController: UIViewController {
         let buttonFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
         
         // 创建图片
-        let image = UIImage.icon(from: iconType, code: iconName, imageSize: CGSize(width: imageSize, height: imageSize), ofSize: imageSize)
+        let image = UIImage.icon(from: iconType, iconColor: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), code: iconName, imageSize: CGSize(width: imageSize, height: imageSize), ofSize: imageSize)
         // 创建动画按钮
         let button = DOFavoriteButton(frame: buttonFrame, image: image)
         button.addTarget(self, action: #selector(tapped(sender:)), for: .touchUpInside)

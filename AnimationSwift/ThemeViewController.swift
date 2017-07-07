@@ -13,8 +13,8 @@ import Fakery
 // 目前还不能记录主题，每次打开都为日间模式
 class ThemeViewController: SpotsController {
 
-    let dayImage = UIImage.icon(from: .Ionicon, code: "ios-sunny-outline", imageSize: CGSize(width: 36, height: 36), ofSize: 36)
-    let nightImage = UIImage.icon(from: .Ionicon, code: "ios-sunny", imageSize: CGSize(width: 36, height: 36), ofSize: 36)
+    let dayImage = UIImage.icon(from: .Ionicon, iconColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), code: "ios-sunny-outline", imageSize: CGSize(width: 36, height: 36), ofSize: 36)
+    let nightImage = UIImage.icon(from: .Ionicon, iconColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), code: "ios-sunny", imageSize: CGSize(width: 36, height: 36), ofSize: 36)
     
     var items = [Item]()
     var statusBarStyle = UIStatusBarStyle.default
@@ -71,7 +71,7 @@ class ThemeViewController: SpotsController {
     }
     
     func setNavigationItems() {
-        let closeImage = UIImage.icon(from: .Ionicon, code: "ios-close-empty", imageSize: CGSize(width: 36, height: 36), ofSize: 36)
+        let closeImage = UIImage.icon(from: .Ionicon, iconColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), code: "ios-close-empty", imageSize: CGSize(width: 36, height: 36), ofSize: 36)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: closeImage, style: .plain, target: self, action: #selector(hero_dismissViewController))
         
         let themeItem = UIBarButtonItem(image: nightImage, style: .plain, target: self, action: #selector(changeTheme(sender:)))

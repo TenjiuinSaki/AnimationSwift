@@ -18,6 +18,7 @@
 		5635ED8C1EFE9E320074F8C4 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635ED8B1EFE9E320074F8C4 /* ThemeViewController.swift */; };
 		5636ACCC1F0BDB2C00394F11 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5636ACCB1F0BDB2C00394F11 /* SideViewController.swift */; };
 		563B91911F009F7500986AC0 /* AlphaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563B91901F009F7500986AC0 /* AlphaTableViewController.swift */; };
+		563C26411F0FB22200C3AEC8 /* BlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C26401F0FB22200C3AEC8 /* BlurViewController.swift */; };
 		5645EAA51F09CC1500F7AA4E /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5645EAA41F09CC1500F7AA4E /* DropDownView.swift */; };
 		5645EAA71F09CC2500F7AA4E /* DropDownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5645EAA61F09CC2500F7AA4E /* DropDownView.xib */; };
 		5645EAA91F0A4A1E00F7AA4E /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5645EAA81F0A4A1E00F7AA4E /* ButtonViewController.swift */; };
@@ -28,6 +29,7 @@
 		5681756A1F0262680020D3E5 /* ButtonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568175681F0262680020D3E5 /* ButtonViewCell.swift */; };
 		5681756B1F0262680020D3E5 /* ButtonViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 568175691F0262680020D3E5 /* ButtonViewCell.xib */; };
 		568787C61F0F1151001A9C3A /* PageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568787C51F0F1151001A9C3A /* PageMenuViewController.swift */; };
+		568787C91F0F835C001A9C3A /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568787C81F0F835C001A9C3A /* SwiftViewController.swift */; };
 		568EF0731F0B7D8D00836DCF /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568EF0721F0B7D8D00836DCF /* PageViewController.swift */; };
 		568EF0751F0B816300836DCF /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568EF0741F0B816300836DCF /* ChildViewController.swift */; };
 		568EF0781F0B992D00836DCF /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568EF0771F0B992D00836DCF /* TabViewController.swift */; };
@@ -56,6 +58,7 @@
 		5635ED8B1EFE9E320074F8C4 /* ThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		5636ACCB1F0BDB2C00394F11 /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
 		563B91901F009F7500986AC0 /* AlphaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaTableViewController.swift; sourceTree = "<group>"; };
+		563C26401F0FB22200C3AEC8 /* BlurViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurViewController.swift; sourceTree = "<group>"; };
 		5645EAA41F09CC1500F7AA4E /* DropDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		5645EAA61F09CC2500F7AA4E /* DropDownView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropDownView.xib; sourceTree = "<group>"; };
 		5645EAA81F0A4A1E00F7AA4E /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		568175681F0262680020D3E5 /* ButtonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewCell.swift; sourceTree = "<group>"; };
 		568175691F0262680020D3E5 /* ButtonViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonViewCell.xib; sourceTree = "<group>"; };
 		568787C51F0F1151001A9C3A /* PageMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuViewController.swift; sourceTree = "<group>"; };
+		568787C81F0F835C001A9C3A /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		568EF0721F0B7D8D00836DCF /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		568EF0741F0B816300836DCF /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		568EF0771F0B992D00836DCF /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 		5632BFEC1EDD9B5600605018 /* AnimationSwift */ = {
 			isa = PBXGroup;
 			children = (
+				563C263F1F0FB21100C3AEC8 /* Blur */,
 				5636ACCA1F0BDAF900394F11 /* Side */,
 				568EF0791F0B9EAA00836DCF /* Font */,
 				568EF0761F0B991900836DCF /* Tab */,
@@ -146,6 +151,7 @@
 				5632BFF61EDD9B5600605018 /* LaunchScreen.storyboard */,
 				5632BFF91EDD9B5600605018 /* Info.plist */,
 				569F87741EFD193B006C8EF2 /* Config.swift */,
+				568787C81F0F835C001A9C3A /* SwiftViewController.swift */,
 			);
 			path = AnimationSwift;
 			sourceTree = "<group>";
@@ -184,6 +190,14 @@
 				563B91901F009F7500986AC0 /* AlphaTableViewController.swift */,
 			);
 			name = NavigationBar;
+			sourceTree = "<group>";
+		};
+		563C263F1F0FB21100C3AEC8 /* Blur */ = {
+			isa = PBXGroup;
+			children = (
+				563C26401F0FB22200C3AEC8 /* BlurViewController.swift */,
+			);
+			name = Blur;
 			sourceTree = "<group>";
 		};
 		565180151EFFEBD100045766 /* Pastel */ = {
@@ -353,6 +367,7 @@
 				"${BUILT_PRODUCTS_DIR}/PageMenu/PageMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
+				"${BUILT_PRODUCTS_DIR}/SABlurImageView/SABlurImageView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Spots/Spots.framework",
 				"${BUILT_PRODUCTS_DIR}/Spruce/Spruce.framework",
@@ -387,6 +402,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PageMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SABlurImageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spots.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spruce.framework",
@@ -452,7 +468,9 @@
 				569F87771EFD1AF6006C8EF2 /* GradientViewController.swift in Sources */,
 				569F87731EFD18AA006C8EF2 /* GradientTableViewCell.swift in Sources */,
 				5635ED851EFE83590074F8C4 /* AnimateTableController.swift in Sources */,
+				563C26411F0FB22200C3AEC8 /* BlurViewController.swift in Sources */,
 				565180171EFFEC2900045766 /* PastelViewController.swift in Sources */,
+				568787C91F0F835C001A9C3A /* SwiftViewController.swift in Sources */,
 				568EF0751F0B816300836DCF /* ChildViewController.swift in Sources */,
 				5681756A1F0262680020D3E5 /* ButtonViewCell.swift in Sources */,
 				5632BFEE1EDD9B5600605018 /* AppDelegate.swift in Sources */,

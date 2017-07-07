@@ -38,7 +38,7 @@ class SideViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         evo_drawerController?.closeDrawer(animated: true) { _ in
             let nav = self.evo_drawerController?.centerViewController as! UINavigationController
-            nav.pushViewController(LabelViewController(), animated: true)
+            nav.pushViewController(SwiftViewController(), animated: true)
         }
     }
 }

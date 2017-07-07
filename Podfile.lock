@@ -40,6 +40,7 @@ PODS:
   - PageMenu (2.0.0)
   - Pastel (0.3.0)
   - PYSearch (0.8.2)
+  - SABlurImageView (3.0.1)
   - SnapKit (3.2.0)
   - Spots (6.1.0):
     - Spots/Core (= 6.1.0)
@@ -49,7 +50,7 @@ PODS:
   - Spruce (1.0.0)
   - Sugar (3.1.2)
   - SwiftHash (1.4.0)
-  - SwiftIconFont (2.6.0)
+  - SwiftIconFont (2.6.1)
   - SwiftMessages (3.4.0)
   - SwiftyTimer (2.0.0)
   - SwipeBack (1.1.1)
@@ -76,6 +77,7 @@ DEPENDENCIES:
   - PageMenu
   - Pastel
   - PYSearch
+  - SABlurImageView
   - SnapKit
   - Spots
   - Spruce
@@ -116,12 +118,13 @@ SPEC CHECKSUMS:
   PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
   Pastel: 738740c84f2b15bbcd96ebe99c4e6c2f5dd42262
   PYSearch: 6abe3721eb6a2f2a77f06a095b734cdb8faf3c81
+  SABlurImageView: bd0940330d0e8571379a495623e57c436659a202
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   Spots: 826ab6c6f0e31236f3c71e427d8341b8cec07468
   Spruce: 07ffdb990923f500111fcbf13d102e16075b230e
   Sugar: e2eb40928c2589bf55977e335a5bc183d09cce24
   SwiftHash: acf0f29032309a5c7a7f625595eade1aca97aca2
-  SwiftIconFont: bbe1f32e1e16bac87dad8566afc80132cb8d072c
+  SwiftIconFont: 5ea68692f8d08cb4cb33ae2b300effabe019133a
   SwiftMessages: e20aa1557fde1525ea369361bec4943cc0d08e7c
   SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
   SwipeBack: d6759601b40da1f4161033feb30ab475d7d04322
@@ -129,6 +132,6 @@ SPEC CHECKSUMS:
   Themes: 9c5626e1b9d0a5683e5179c00c38077bd0281148
   YNDropDownMenu: 9d9f1ae71a408d0e7c66a55da2a52232545fca5a
 
-PODFILE CHECKSUM: 87ca5f6c6cb98d7fcc4b1e151277772109ee888b
+PODFILE CHECKSUM: 667845d580f057b5d91e3793071f233cf06f44d2
 
 COCOAPODS: 1.3.0.beta.2
