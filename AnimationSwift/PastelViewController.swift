@@ -88,8 +88,7 @@ class PastelViewController: UIViewController {
             })
         }
         
-        
-        
+    
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

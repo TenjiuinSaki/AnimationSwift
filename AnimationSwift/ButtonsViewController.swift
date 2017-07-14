@@ -12,6 +12,7 @@ import PYSearch
 import YNDropDownMenu
 import Spruce
 import SwiftyTimer
+import RandomColorSwift
 
 class ButtonsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -83,7 +84,13 @@ class ButtonsViewController: UIViewController, UICollectionViewDelegate, UIColle
         return names
     }()
     
-    var iconFontNames = [String]()
+    var iconFontNames = [String]() {
+        didSet {
+            colors = randomColors(count: iconFontNames.count, hue: .random, luminosity: .bright)
+        }
+    }
+    var colors = [UIColor]()
+    
     var buttonType: Fonts = .FontAwesome {
         didSet {
             title = buttonType.rawValue
@@ -119,6 +126,9 @@ class ButtonsViewController: UIViewController, UICollectionViewDelegate, UIColle
 //    let sortFunction = RandomSortFunction(interObjectDelay: 0.025)
     
     var isFirstEnter = true
+    
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -213,10 +223,11 @@ class ButtonsViewController: UIViewController, UICollectionViewDelegate, UIColle
     ///
     /// - Parameter name: 搜索文字
     func searchSelect(name: String) {
-        let buttonVC = ButtonViewController()
-        buttonVC.iconName = name
-        navigationController?.pushViewController(buttonVC, animated: true)
-        
+        if name.contains(":") {
+            let buttonVC = ButtonViewController()
+            buttonVC.iconName = name
+            navigationController?.pushViewController(buttonVC, animated: true)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -226,6 +237,7 @@ class ButtonsViewController: UIViewController, UICollectionViewDelegate, UIColle
         cell.nameLabel.text = iconName
         cell.iconLabel.text = iconName
         cell.iconLabel.parseIcon()
+        cell.iconLabel.textColor = colors[indexPath.row]
         return cell
     }
     

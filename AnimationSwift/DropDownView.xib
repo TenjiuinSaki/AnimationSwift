@@ -18,6 +18,9 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="On3-PP-MCo">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="277"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="277" id="sX2-IV-GIO"/>
+                    </constraints>
                     <connections>
                         <outlet property="dataSource" destination="iN0-l3-epB" id="Bw7-3k-YRR"/>
                         <outlet property="delegate" destination="iN0-l3-epB" id="zKx-Dq-qZl"/>
@@ -29,7 +32,6 @@
                 <constraint firstItem="On3-PP-MCo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UNz-jF-UdS"/>
                 <constraint firstItem="On3-PP-MCo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YaX-pM-SEs"/>
                 <constraint firstAttribute="trailing" secondItem="On3-PP-MCo" secondAttribute="trailing" id="ZyP-wn-zVb"/>
-                <constraint firstAttribute="bottom" secondItem="On3-PP-MCo" secondAttribute="bottom" id="ghd-cy-RpZ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

@@ -11,6 +11,7 @@ import PageMenu
 
 class PageMenuViewController: UIViewController {
 
+    var pageMenu: CAPSPageMenu!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,8 +34,10 @@ class PageMenuViewController: UIViewController {
                      "iTunes"]
         
         var controllers = [UIViewController]()
-        for text in texts {
-            controllers.append(ChildViewController(title: text))
+        for (i, text) in texts.enumerated() {
+            let child = ChildViewController(title: text)
+            child.index = i
+            controllers.append(child)
         }
         
         let options: [CAPSPageMenuOption] = [
@@ -50,10 +53,9 @@ class PageMenuViewController: UIViewController {
             CAPSPageMenuOption.bottomMenuHairlineColor(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
         ]
         
-        let pageMenu = CAPSPageMenu(viewControllers: controllers, frame: Screen.bounds, pageMenuOptions: options)
+        pageMenu = CAPSPageMenu(viewControllers: controllers, frame: Screen.bounds, pageMenuOptions: options)
         
         view.addSubview(pageMenu.view)
-        addChildViewController(pageMenu)
     }
     
     func addCloseButton() {

@@ -9,6 +9,7 @@
 import UIKit
 import Themes
 import Cache
+import Alamofire
 
 struct Screen {
     static let width = UIScreen.main.bounds.size.width
@@ -143,33 +144,87 @@ func info<T>(message: T, fullName: String = #file, lineNum: Int = #line) {
 }
 
 
-struct TSCache {
-    /// 缓存
-    static let cache = HybridCache(name: "SystemCache", config: Config(
-        expiry: .date(Date().addingTimeInterval(60 * 5)),   //过期时间5分钟
-        memoryCountLimit: 0,
-        memoryTotalCostLimit: 0,
-        maxDiskSize: 10000,                             //缓存大小10M
-        cacheDirectory: DirPath.document + "/cache-in-documents"))
-    
-    static func setDic(_ dic: [String: Any], key: String) {
-        try? cache.addObject(JSON.dictionary(dic), forKey: key)
-    }
-    
-    static func getDic(key: String) -> [String: Any]? {
-        let json: JSON? = cache.object(forKey: key)
-        return json?.object as? [String: Any]
-    }
-    
-    static func setArray(_ arr: [Any], key: String) {
-        try? cache.addObject(JSON.array(arr), forKey: key)
-    }
-    
-    static func getArray(key: String) -> [Any]? {
-        let json: JSON? = cache.object(forKey: key)
-        return json?.object as? [Any]
-    }
-}
+//public struct TSCache {
+//    /// 缓存
+//    static let cache = HybridCache(name: "SystemCache", config: Config(
+//        expiry: .date(Date().addingTimeInterval(60 * 5)),   //过期时间5分钟
+//        memoryCountLimit: 0,
+//        memoryTotalCostLimit: 0,
+//        maxDiskSize: 10000,                             //缓存大小10M
+//        cacheDirectory: String.documentsPath + "/cache-in-documents"))
+//    
+//    public static func setDic(_ dic: [String: Any], key: String) {
+//        try? cache.addObject(JSON.dictionary(dic), forKey: key)
+//    }
+//    
+//    public static func getDic(key: String) -> [String: Any]? {
+//        let json: JSON? = cache.object(forKey: key)
+//        return json?.object as? [String: Any]
+//    }
+//    
+//    public static func setArray(_ arr: [Any], key: String) {
+//        try? cache.addObject(JSON.array(arr), forKey: key)
+//    }
+//    
+//    public static func getArray(key: String) -> [Any]? {
+//        let json: JSON? = cache.object(forKey: key)
+//        return json?.object as? [Any]
+//    }
+//}
+
+//public extension URLRequest {
+//    
+//    public static func get(url: String, params: [String: AnyObject]? = nil, log: Bool = false, success: ((NSObject) -> Void)? = nil, fail: ((String) -> Void)? = nil) {
+//        
+//        guard NetworkReachabilityManager.init()!.isReachable else {
+//            fail?("无网络连接")
+//            return
+//        }
+//        
+//        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+//        Alamofire.request(url, method: .get, parameters: params).responseJSON { (res) in
+//            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//            if res.result.isSuccess {
+//                if let data = res.result.value as? NSObject {
+//                    if log {
+//                        TSLog(message: "***************GET请求***************\nURL:\(url)\n" + data.description.decodeUnicode)
+//                    }
+//                    success?(data)
+//                } else {
+//                    fail?("数据解析失败")
+//                }
+//            } else {
+//                fail?("请求失败")
+//            }
+//        }
+//    }
+//    
+//    public static func post(url: String, params: [String: AnyObject]? = nil, log: Bool = false, success: ((NSObject) -> Void)? = nil, fail: ((String) -> Void)? = nil) {
+//        
+//        guard NetworkReachabilityManager.init()!.isReachable else {
+//            fail?("无网络连接")
+//            return
+//        }
+//        
+//        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+//        Alamofire.request(url, method: .post, parameters: params).responseJSON { (res) in
+//            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//            if res.result.isSuccess {
+//                if let data = res.result.value as? NSObject {
+//                    if log {
+//                        TSLog(message: "***************POST请求***************\nURL:\(url)\n" + data.description.decodeUnicode)
+//                    }
+//                    success?(data)
+//                } else {
+//                    fail?("数据解析失败")
+//                }
+//            } else {
+//                fail?("请求失败")
+//            }
+//        }
+//    }
+//}
+
 
 
 struct DirPath {
@@ -205,3 +260,4 @@ extension UIView {
         return image
     }
 }
+

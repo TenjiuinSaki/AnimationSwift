@@ -27,7 +27,7 @@ class ChildViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.rowHeight = 80
-        tableView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0)
+//        tableView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(view)
         }

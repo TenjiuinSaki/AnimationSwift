@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FBD58B02305AB18A9BF2675A110E32C7'
+               BlueprintIdentifier = 'DEFAEB115D1E94A1F31F8373853C58F1'
                BlueprintName = 'Themes'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Themes.framework'>
